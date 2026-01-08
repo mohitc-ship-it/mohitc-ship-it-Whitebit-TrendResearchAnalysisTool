@@ -1,0 +1,108 @@
+[
+{
+  "tag": "trending_content",
+  "prompt": "You are a Playwright computer agent.\n\n🎯 Goal:\nAnalyze top trending videos and posts for the query \"{query}\" across YouTube, Reddit, and nitter.net (Twitter/X) to identify engagement patterns, clickbait trends, and popular content types.\n\nSteps:\n1. Open YouTube in the browser.\n2. In the search bar, type \"{query}\" and press Enter.\n3. Wait for results to load fully and scroll down to collect at least the top 10 videos.\n4. For each video result:\n   - Click on the video to open it in a new tab.\n   - Record the title, URL, channel name, view count, likes, comments (if visible), and publish date.\n   - Observe the video thumbnail and title to estimate a clickbait score based on visual exaggeration, emotional words, emojis, and sensational phrasing.\n   - Identify the general content type: tutorial, news, review, analysis, meme, or opinion.\n   - Close the video tab and move to the next one.\n5. Open Reddit in the browser.\n6. Use the search bar to search for \"{query}\" and ensure results are sorted by top or hot posts.\n7. From relevant subreddits, collect the top 10 posts. For each post, record the title, subreddit name, URL, upvotes, comments, and publish date.\n   - Quickly analyze the post title or preview text to categorize content type and identify popular discussion topics.\n8. Open nitter.net (Twitter/X alternative) and search for \"{query}\".\n9. Collect the top tweets from verified or high-engagement users. For each tweet, record username, handle, tweet text, likes, retweets, and replies.\n   - Assess the tweet’s tone (news, opinion, meme, announcement) and engagement pattern.\n10. Compare across platforms to identify recurring keywords, visual patterns, and styles that drive engagement.\n11. Summarize overall clickbait tendencies based on title formatting, thumbnail designs, and post styles.\n12. Finally, structure all collected data exactly according to the {output_template} provided.\n\n⚙️ Output format:\n{output_template}\n\nNotes:\nReturn JSON exactly as structured, no extra text or commentary. Ensure all fields are filled accurately using observed data. Do not include transcripts or captions in this analysis.",
+  "output": {
+    "content_analysis": [
+      {
+        "title": "...",
+        "platform": "...",
+        "url": "...",
+        "channel_or_user": "...",
+        "views": "...",
+        "likes": "...",
+        "publish_date": "...",
+        "type": "...",
+        "clickbait_score": "..."
+      }
+    ]
+  }
+},
+  {
+    "tag": "content_analysis",
+    "prompt": "You are a Playwright computer agent.\n\n🎯 Goal:\nAnalyze content retrieved for the query \"{query}\" to classify content type, clickbait patterns, and generate recommended titles and topics.\n\nSteps:\n1. Take videos/posts from trending_content results.\n2. For each, classify as tutorial, news, analysis, meme.\n3. Evaluate title and thumbnail for clickbait score using patterns: number usage, sensational words, emojis, phrasing.\n4. Extract main topics and subtopics using keywords, hashtags, and semantic analysis.\n5. Generate 3-5 suggested titles for new content, preserving high-engagement patterns.\n6. Include summary of content style and user intent for each post/video.\n7. Finally, structure all collected data exactly according to the {output_template} provided.\n\n⚙️ Output format:\n{output_template}\n\nNotes:\nReturn JSON exactly as structured.",
+    "output": {
+      "content_analysis": [
+        {
+          "title": "...",
+          "platform": "...",
+          "type": "...",
+          "clickbait_score": "...",
+          "topics": ["..."],
+          "suggested_titles": ["...", "..."]
+        }
+      ]
+    }
+  },
+  {
+    "tag": "influencer_analysis",
+    "prompt": "You are a Playwright computer agent.\n\n🎯 Goal:\nIdentify top influencers for the query \"{query}\" and collect metrics for potential collaboration.\n\nSteps:\n1. Visit YouTube, nitter.net (Twitter/X), Reddit, and Picuki (Instagram alternative).\n2. Search for \"{query}\" and identify top channels/profiles with high engagement.\n3. For each influencer, collect: subscribers/followers, average views per post/video, likes, comments, retweets/shares.\n4. Estimate collaboration pricing for mention (30-60s), integration (90-120s), dedicated video, and shorts/reels by checking public pricing info or site search.\n5. Try to retrieve manager contact info or collaboration links from profile or public data.\n6. Rank influencers by engagement, relevance, and audience value.\n7. Finally, structure all collected data exactly according to the {output_template} provided.\n\n⚙️ Output format:\n{output_template}\n\nNotes:\nReturn JSON exactly as structured.",
+    "output": {
+      "top_influencers": [
+        {
+          "name": "...",
+          "platform": "...",
+          "subscribers": "...",
+          "average_views": "...",
+          "engagement": "...",
+          "pricing": {
+            "mention": "...",
+            "integration": "...",
+            "dedicated_video": "...",
+            "shorts_reels": "..."
+          },
+          "manager_contact": "..."
+        }
+      ]
+    }
+  },
+  {
+    "tag": "ads_analysis",
+    "prompt": "You are a Playwright computer agent.\n\n🎯 Goal:\nAnalyze trending ads for the query \"{query}\" across YouTube, nitter.net (Twitter/X) promoted posts, and Facebook Ads Library.\n\nSteps:\n1. Go to Facebook Ads Library.\n2. Select 'All Ads' category.\n3. Search for \"{query}\".\n4. Retrieve top 10 ads: creative, copy, engagement metrics, link, platform.\n5. For YouTube, retrieve top promoted videos for \"{query}\".\n6. On nitter.net, find promoted tweets if available.\n7. Analyze ad copy, creative style, and engagement patterns.\n8. Identify high-performing ad formats and recurring copy patterns.\n9. Finally, structure all collected ad data exactly according to the {output_template} provided.\n\n⚙️ Output format:\n{output_template}\n\nNotes:\nReturn JSON exactly as structured.",
+    "output": {
+      "ads_insights": [
+        {
+          "platform": "...",
+          "creative": "...",
+          "copy": "...",
+          "engagement": "...",
+          "link": "..."
+        }
+      ]
+    }
+  },
+{
+  "tag": "keyword_research",
+  "prompt": "You are an autonomous Playwright agent. Your goal is to extract keyword trends for the query \"{query}\" using Google Trends globally. Follow each step sequentially and make decisions based on what you see on screen. Handle pop-ups, consent, or human verification as needed.\n\nGOAL:\n- Collect all top and rising related queries and related topics for \"{query}\".\n- Record keyword text and their scores, including any subtopics.\n\nSTEPS:\n1. Open Google Trends at https://trends.google.com/trends.\n2. Wait until the main search input and Explore/Search button are visible.\n3. Click inside the search input, type the full query \"{query}\", and press Enter or click Explore.\n4. If a CAPTCHA or human verification appears, wait for it to become visible, click the tick box or follow instructions, and wait until verification completes.\n5. On the results page, you will see charts and sections like 'Interest over time', 'Related queries', and 'Related topics'.\n6. Scroll down to the 'Related queries' section.\n   - Click the 'Top' tab, record all visible keywords with their scores (or 'Breakout' if shown), mark type = 'Top'.\n   - Click the 'Rising' tab, record all visible keywords with their scores, mark type = 'Rising'.\n7. Scroll to 'Related topics' section.\n   - Click 'Top' tab, record topic name, score, and category tags as related_subtopics.\n   - Click 'Rising' tab, record the same.\n8. For each collected keyword or topic, create a structured record with:\n   - keyword: text of the query or topic\n   - platform: 'Google Trends - Related queries' or 'Google Trends - Related topics'\n   - search_score: numeric score or 'Breakout'\n   - related_subtopics: list of subtopics or empty\n   - type: 'Top' or 'Rising'\n9. Remove duplicates (case-insensitive) and ensure consistent formatting.\n10. Return JSON exactly in the format of {output_template}, no extra text or commentary.",
+  "output": {
+    "keywords": [
+      {
+        "keyword": "...",
+        "platform": "...",
+        "search_score": "...",
+        "related_subtopics": ["..."],
+        "type": "Top/Rising"
+      }
+    ]
+  }
+}
+
+
+
+,
+  {
+    "tag": "premium_agent",
+    "prompt": "You are a Playwright computer agent.\n\n🎯 Goal:\nPerform premium-level analysis for the query \"{query}\".\n\nSteps:\n1. Fetch top influencer content for each influencer identified.\n2. Apply advanced filtering by geography, engagement, platform, and relevance.\n3. Collect manager contact info or emails for collaboration.\n4. Generate competitor ad copy recommendations, noting patterns and performance.\n5. Aggregate all multi-platform insights (trending content, influencers, ads, keywords) into one structured JSON.\n6. Provide suggested actions for marketing campaigns based on insights.\n7. Finally, structure all collected premium-level data exactly according to the {output_template} provided.\n\n⚙️ Output format:\n{output_template}\n\nNotes:\nReturn JSON exactly as structured.",
+    "output": {
+      "premium_insights": [
+        {
+          "top_influencer_videos": ["..."],
+          "manager_contacts": ["..."],
+          "ad_recommendations": ["..."]
+        }
+      ]
+    }
+  }
+]
+
+

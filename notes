@@ -1,0 +1,242 @@
+youtube
+twitter
+google web searh
+reddit
+
+
+
+
+we can also do like manus but not now
+-make sure add llm -> which will break user query -> into diffferent searchable queries and types to provide full analysis
+
+in mcp steps would be
+
+-get top videos of query with all details
+-then get top channels of that domain - there videos of this topic
+-research about that topic on reddit and x  and other social platoforms and websites which can do - use site:semrush.com to get specifcially data out from seamrush and kinda...
+-also analyse these top videos and creator specific videos transcript for understanding what type of content it has
+-what clickbait is working would be analyzed from there thumbnails - as views count are based on that
+-finally give all data to llm and ask it to list - things people search, what people want, what clickbait works, top titles we can make content on, what topics or content will have in it, and kinda stuff
+
+
+Top influencers to collboarte too
+-then get top channels of that domain (for youtube it would be channels , for insta it would be profiles and similar analogy)
+-research about those creators on x and reddit and google and other social media
+-now analyze there subscriber, daily virews and if we can get watch time - look which seems best to colaborate as cmo
+-also look if we can find somewhere how much they generally charge for what , for approx quote of different types, like video post, image post, story , etc.. types , or what is average price -> look any apis is give this, or websites then use site:... to get averga prices of specific creator or creator with these stats...
+
+Types of integrations we can have with influencers
+Mentions – a “shoutout” style partnership, where you talk about the brand for anywhere from 30-60 seconds.
+Integrations – a longer “shoutout” style partnership where you talk about the brand for anywhere from 90 seconds to 2 minutes. The integration should be relevant to the video and talking about the brand should feel more natural to the viewer.  
+Dedicated Videos –  an entire video about the brand or the product that they’re sent to you. 
+Shorts – a brand sponsors a Short instead of a full video.
+
+
+
+
+
+Factors Influencing Creator Pricing
+Subscriber Count & Engagement: Larger channels with more engaged audiences can command higher prices. 
+Niche and Audience Value: Niches like technology and finance may have higher CPMs due to high-value audiences. 
+Video Length and Placement: Longer integrations or integrations in prominent spots may cost more. 
+Content Type: Creators can charge a flat fee for the video or use pricing models like Cost Per Mille (CPM) or Cost Per View (CPV). 
+Negotiation: Brands and creators negotiate the terms, and the first price quoted by the creator can serve as a starting point for negotiation. 
+How to Determine Your Collaboration Rate
+Calculate Your Average Views and CPM: Use your YouTube Analytics to find out how many average views your videos receive. 
+Decide on a Pricing Model:
+Flat Fee: A set price for the sponsored content. 
+CPM (Cost Per Mille): A payment for every thousand views the sponsored video receives. 
+CPV (Cost Per View): A set amount for each view of the sponsored advertisement. 
+Consider Your Value: Be professional and provide clear justifications for your pricing based on your audience's value and the effort involved
+
+
+
+-use google trends website - get scores for google suggested and ai suggested keywords for ads 
+-what people search for is in the end of webpage and is mid-way while search on google and youtube
+
+
+
+
+<!-- if wanted i can add calculator -->
+
+
+
+<!-- prompts -->
+
+You are a Playwright computer agent.
+
+🎯 Goal:
+Find and collect the **top real search queries people make related to "crypto"**.
+
+🪜 Steps:
+1. Open **Google Trends** (https://trends.google.com/trends/explore).
+2. Search for “crypto”.
+3. Extract:
+   - Related topics
+   - Related queries
+   - Trending searches (if shown)
+4. Then visit **AnswerThePublic.com**, search “crypto”, and extract suggested search queries.
+5. Optionally, visit **Google.com** and start typing “crypto” to capture auto-suggested completions.
+6.go to nitter.com and search for crypto and extract suggested search queries.
+6. Combine all unique search terms.
+
+⚙️ Output format:
+Return your findings as structured JSON:
+{
+  "google_trends_related_queries": [
+    { "query": "...", "interest": "..." }
+  ],
+  "answer_the_public": [
+    "crypto what is",
+    "crypto how to invest",
+    ...
+  ],
+  "google_autosuggest": [
+    "crypto price today",
+    "crypto news",
+    ...
+  ],
+  "nitter_suggested_queries": [
+    "crypto news",
+    "crypto updates",
+    ...  ]
+}
+
+🧩 Constraints:
+- Do not log in anywhere.
+- If a page fails to load, retry once.
+- Avoid clicking ads.
+- Scroll if needed to see all related queries.
+- Return a screenshot for each major step.
+
+Return JSON + any supporting screenshots.
+
+
+
+
+--will also get latest memes - as web3 has great meme culture which help them grow
+
+
+    query = "crypto "
+    # Run the query
+    result = await agent.run(
+        f"""You are a Playwright computer agent.
+
+🎯 Goal:
+Fetch the top trending content (videos, posts) for the query: "[INSERT_KEYWORD]".
+
+Platforms:
+- YouTube
+- Twitter/X
+- Reddit
+- Google Web Search
+
+🪜 Steps:
+1. On YouTube: search for {query}.
+   - Extract top 10 videos: title, channel, views, likes, comments, publishing date, URL.
+   - Capture video type (tutorial, news, analysis, meme) if possible from title or description.
+
+2. On Twitter/X: search {query}.
+   - Extract top 10 posts: text, user handle, likes, retweets, replies, date, URL.
+
+3. On Reddit: search {query}.
+   - Extract top 10 posts: title, subreddit, upvotes, comments, date, URL.
+
+4. On Google Web Search: search {query}.
+   - Extract top 10 URLs, titles, and snippets.
+
+⚙️ Output format:
+{output}
+
+🧩 Constraints:
+- Avoid ads or sponsored content.
+- Scroll to load content if necessary.
+- Return screenshots for major steps.
+
+"""
+    )
+
+
+
+
+query = "crypto "
+    # Run the query
+    result = await agent.run(
+        f"""You are a Playwright computer agent.
+
+🎯 Goal:
+Identify the most relevant creators producing content on "[INSERT_KEYWORD]".
+
+Platforms:
+- YouTube
+- Instagram/TikTok
+- Twitter/X
+- Reddit
+
+🪜 Steps:
+1. On YouTube: find top channels posting about {query}.
+   - Extract: channel name, subscriber count, total videos, average views per video, engagement rate, URL.
+
+2. On Instagram/TikTok: find top profiles posting about {query}.
+   - Extract: profile name, followers, engagement rate, content count, URL.
+
+3. On Twitter/X: extract top users posting about {query}.
+   - Extract: handle, followers, engagement metrics, URL.
+
+4. On Reddit: identify top contributors.
+   - Extract: username, karma, subreddit focus, engagement.
+
+⚙️ Output format:
+{output}
+
+"""
+    )
+
+
+
+
+query = "crypto "
+    # Run the query
+    result = await agent.run(
+        f"""You are a Playwright computer agent.
+
+🎯 Goal:
+Identify the most relevant creators producing content on "[INSERT_KEYWORD]".
+
+Platforms:
+- YouTube
+- Instagram/TikTok
+- Twitter/X
+- Reddit
+
+🪜 Steps:
+1. On YouTube: find top channels posting about {query}.
+   - Extract: channel name, subscriber count, total videos, average views per video, engagement rate, URL.
+
+2. On Instagram/TikTok: find top profiles posting about {query}.
+   - Extract: profile name, followers, engagement rate, content count, URL.
+
+3. On Twitter/X: extract top users posting about {query}.
+   - Extract: handle, followers, engagement metrics, URL.
+
+4. On Reddit: identify top contributors.
+   - Extract: username, karma, subreddit focus, engagement.
+
+⚙️ Output format:
+{output}
+
+"""
+    )
+
+
+--we can give a premium option which will get specific things by ai , like if u want it could look onto speicifc things like top tweet of top infleuncer -> so it will need to search filter -> we can add that but in premiums -> means we can give u an action agent -> where u can just write and it will do in your laptop
+
+-will require youtube transcript api still for content
+-but we can do thumbnail analysis by this and get best of clickbaits
+
+-will also need for geographical based youtube data analysis yt mcp or api
+-while for search google trends can help
+
+-make sure to generate topic multiple queries for research on different platforms so that we get good results if wanted somewhere and not speaking specific
+
+ 

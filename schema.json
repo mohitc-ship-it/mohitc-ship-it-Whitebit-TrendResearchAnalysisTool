@@ -1,0 +1,60 @@
+{
+  "videos": {
+    "<video_title>": {
+      "video_info": {
+        "videoId": "<string>",
+        "channel": "<string>",
+        "publishedAt": "<ISO8601_timestamp>",
+        "thumbnail": "<url>",
+        "transcript": "<string>"
+      },
+      "video_stats": {
+        "views": "<int or string>",
+        "likes": "<int or string>",
+        "comments": "<int or string>",
+        "channel": "<string>"
+      },
+      "market_analysis": "<string or markdown_summary>"
+    }
+  },
+
+  "reddit_posts": [
+    {
+      "title": "<string>",
+      "subreddit": "<string>",
+      "upvotes": "<int>",
+      "author": "<string>",
+      "url": "<url>"
+    }
+  ],
+
+  "x_data": {
+    "tweets": [
+      {
+        "username": "<string>",
+        "handle": "<string>",
+        "content": "<string>",
+        "timestamp": "<ISO8601_timestamp>",
+        "retweets": "<int>",
+        "likes": "<int>"
+      }
+    ]
+  },
+
+  "ads_data": {
+    "ads": [
+      {
+        "media_link": "<url>",
+        "started_date": "<ISO8601_timestamp>",
+        "ad_content_visible": "<string>",
+        "type": "reel | post | story | image | video"
+      }
+    ]
+  },
+
+  "people_search_for": {
+    "google_recommendations": ["<string>", "..."],
+    "people_also_ask": ["<string>", "..."],
+    "youtube_recommendations": ["<string>", "..."]
+  }
+}

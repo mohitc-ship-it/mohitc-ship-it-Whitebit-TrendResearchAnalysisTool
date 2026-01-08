@@ -1,0 +1,757 @@
+[
+    {
+        "videos": {
+            "Intro to Agent Builder": {
+                "video_info": {
+                    "videoId": "44eFf-tRiSg",
+                    "channel": "OpenAI",
+                    "publishedAt": "2025-10-06T18:00:06Z",
+                    "thumbnail": "https://i.ytimg.com/vi/44eFf-tRiSg/hqdefault.jpg",
+                    "transcript": "Hey everyone, this is Christina from OpenAI. Welcome to Agent Builder 101. Agent Builder is a new visual tool for building AI workflows. You connect nodes and create agents without writing any code. So you can start from templates or build your own from scratch. And it also comes with built-in eval so you can test and understand how your agents perform. When you're ready, you can export the workflow as code or drop it straight into your product. Basically, it's your all-in-one space to design, test, and launch AI agents visually and fast. So, today we're going to show you how to build your first agentic workflow, a helpful travel agent that will help you either build an itinerary or look up flight information. So, we're starting here in the OpenAI platform. Every workflow starts with a start node where you can set input variables or state variables. And today for the travel agent, the defaults are great. Next, I'll connect a classifier agent. I'm going to be building a specialized itinerary agent in addition to a specialized flight agent. And so, I want to first determine which agent I should route to. So, I'll call this classifier. So, you are a helpful travel assistant for classifying whether a message is about an itinerary or a flight. And here I'll specify the output format as JSON. And I'll add a property called classification which will have two options either flight info or itinerary. Great. Next, I'll add in an if else node um to branch based off of the classification. So if put pars.classification classification is flight info then we want to branch to the flight agent and otherwise we want to branch into the um the itinerary agent. So from the flight agent we'll create a new node and we'll call this flight agent. You are a travel assistant. always recommend a specific flight to go to. Use airport codes. And here I'll also give it access to web search so I can have the most up-to-date information about flights. Great. For the itinerary agent, I'll build um an itinerary agent with a new agent node. You are a travel assistant. So build a concise itinerary. Great. I think that's everything we need to get started with our travel agent. So here in run preview, I'll ask it what should I do in a day in Tokyo. And I can see the message going through the workflow that we just created. going through the classifier agent, deciding which category it should go to, seeing that I asked about an itinerary, and then passing it on to the itinerary agent, whereas come up with a concise one-day itinerary for Tokyo. Looks like a great day. Now, for the flight agent, I actually want a richer experience for showing flight information instead of just plain text. And so, I can do that by going and building a widget in our widget studio. Here I've actually already designed um a widget for showing flight information to go from one location to the next with um all the details about the flight. So I can just click download um to download this entire template and then bring that directly to the agent um that we just created here. I'll add it in as the widgets output format. I'll upload this flight widget that we just pulled. Preview it. Everything looks great. And I actually want this to be a bit more customized. Um, and so I will tell it to choose a background color creatively based on the destination. And I'll also ask it to include time zones A.M. or PM. Great. Let's test it out. SFO to Tokyo on October 7th. So here again, we see it moving through the classifier agent um determining whether I'm asking about um a flight or an itinerary, deciding that I'm asking about a flight agent um or deciding that I'm asking about a flight, searching the web, finding a flight for me, and then showing it to me in this rich interactive way. In this case, it's decided that yellow is the color of Tokyo. Um, and so showed that as the background color. Great. So I've now built an agent that I'm happy with and I can publish it directly. Let's call it travel agent here. And I now have a fully deployed agent that is ready to go. Um, I can either use the agents SDK. And here you can see that this is quite a bit of code um for me to manage myself or I can simply take this workflow ID and put it in my product directly using jacket. So that's all. Hope that was helpful and please leave any feedback in the comments and don't forget to subscribe to OpenAI devs for more product updates. Thank you."
+                },
+                "video_stats": {
+                    "views": "958785",
+                    "likes": "30369",
+                    "comments": "1660",
+                    "channel": "OpenAI"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n#### Content\n1. **Topic Relevance**: The video focuses on a contemporary and high-interest topic\u2014building AI workflows using a visual tool. As AI continues to be a rapidly expanding field, content related to simplifying AI development is highly sought after.\n   \n2. **Educational Value**: The video provides a step-by-step guide to using the Agent Builder tool, offering clear, actionable insights for viewers interested in AI development. This educational approach attracts both beginners and experienced developers looking to enhance their skills without needing extensive coding knowledge.\n\n3. **Innovative Product Feature**: Introducing a tool that allows creation of AI workflows without coding makes it appealing to a wider audience, thus expanding its viewer base beyond just seasoned programmers.\n\n#### Thumbnail\n1. **Visual Appeal**: The thumbnail is clean, professional, and directly related to the content, showing the interface of the tool. The simplicity and clarity can attract viewers who are looking for easy-to-follow tutorials.\n   \n2. **Text Elements**: It includes a clear title overlay that captures the essence of the video, helping it stand out in search results or recommendations.\n\n#### Channel Influence\n1. **Brand Authority**: OpenAI is a recognized leader in the field of AI, lending the video authority and credibility that attracts viewers interested in high-quality, reliable information.\n   \n2. **Subscribers and Reach**: The reach of the OpenAI channel means that the video benefits from an established audience base, driving initial views and engagement.\n\n#### Audience Engagement\n1. **Engagement Metrics**: With substantial likes and comments, this suggests that the video resonates with its audience. The high level of interaction often helps boost video visibility on platforms like YouTube.\n\n2. **Community Interaction**: Engaging with comments and fostering discussions may have contributed to increased viewer loyalty and video shares.\n\n### Suggestions for Replication\n\n1. **Focus on High-Demand Topics**: Choose topics related to current trends in technology or other emerging fields that have widespread interest.\n\n2. **Educational and Practical Content**: Develop content that is both informative and easy to understand, appealing to a wide range of expertise levels.\n\n3. **Cohesive Branding and Authority**: Establish a recognized brand or collaborate with established authorities in the field to gain trust and credibility.\n\n4. **Optimized Thumbnails**: Use clear, professional graphic design with direct relevance to video content to attract clicks.\n\n5. **Engage with Your Audience**: Foster"
+            },
+            "The AI Agent Gold Rush: Build ChatGPT Apps With Agent Builder (Dev Day Full Breakdown)": {
+                "video_info": {
+                    "videoId": "Qy5gvSoF2qs",
+                    "channel": "Vaibhav Sisinty",
+                    "publishedAt": "2025-10-08T13:15:05Z",
+                    "thumbnail": "https://i.ytimg.com/vi/Qy5gvSoF2qs/hqdefault.jpg",
+                    "transcript": "While you were sleeping, OpenAI just launched a new app store inside Chat GPT. And guess what? It has 800 million active users on day one. At dev day, Sam Alman revealed agent builder, a tool that could replace tools like N8N or Zapier. Codeex, which makes coding 10 times faster. And with apps like Spotify and Figma built right into ChatGpt, it's now a full app platform. In this video, I'm breaking down all the big announcements you might have missed. Plus, I'll show you how to use OpenAI's new agent builder to build your own AI agent from scratch. No coding needed. Watch till the end or you'll miss out on what could be our generation's biggest opportunity. Let's dive in. Okay, so here's where it gets wild. Forget everything you know about app stores. Apps now just live inside Chat GPT. Now look, OpenAI tried this before with the GPT store. Remember that this is completely different. Apps aren't in some separate store anymore. They're right there in your conversation. Let me show you what I mean. You're in chat GPT, right? You type Spotify, make me a playlist for my party. Boom. Spotify just appears right there. Interactive, personalized, instant, no switching apps, no copying links, nothing. Or you're like, Corsera, teach me about machine learning. And suddenly you've got courses, videos playing right there in the chat while you keep talking to chat GPT. The apps SDK is built on this thing called MCP, model context protocol. Basically means you get full control. Your back end, your data, your UI design, all of it. But here's the actually crazy part. They have this feature called talking to apps. Chat GPT can literally see what you're looking at. You don't have to explain context. So you're watching a Corsera video and something doesn't make sense. Just ask Chat GPT right then and there. It sees the timestamp, knows exactly what's being discussed, explains it to you. The launch partners that are already live include Figma. You can literally sketch something and have it turn into a working diagram. Using Canva, you can start creating posters, slide decks just from conversation. Okay, this one's actually wild. You're chatting and say, \"Show me threebedroom homes in Pittsburgh under 500,000 with a yard.\" Boom. Map appears. Full Zillow experience inside chat GPD. You see a house you like, click it, goes full screen with all the details. Then here's where it gets insane. You can ask chat GPT, \"How close is this house to a dog park?\" And it pulls that context from the Zillow map you're looking at and searches for you. Here's the business side. Monetization is coming. They announced this agentic commerce protocol, which is just fancy talk for instant checkout inside ChatGpt. You can sell directly to 800 million people. If you're a developer, you need to get what just happened here. This is legitimately 2008. Again, back then, the App Store gave you maybe 500 million iPhone users over time. The app's SDK gives you 800 million Chat GPT users. Right now, today, now it's in preview, so not everyone can build yet. But later this year, when the directory launches, that's when it's open season. And for everyone watching who's not a developer, this means your Chat GPT experience is about to get 100 times more useful. Everything you used to have to switch apps for, shopping, learning, planning trips, finding homes, it's all going to be right there in one conversation. The gold rush literally just started. All right, next thing. Agent kit. So, until now, if you wanted to build an AI agent, it was a nightmare. OpenAI just said, \"Forget all that and build everything in one place.\" It's called agent kit. Think of it like a complete toolbox for building AI agents. Everything you need is right there. Here's what's inside. Agent Builder. This is the visual part. You literally just drag boxes around and connect them like you're drawing a flowchart. No coding needed. If you've used those workflow tools before, same idea, but this one's made specifically for AI. Chatkit. This is your chat window. You know how every AI agent needs that chat interface where people type stuff? This is that. Just drop it into your app. Make it look however you want. Your colors, your style. Done. Evils. Okay. So, this is the testing part. And this is huge because with regular automation tools, you can't really test if your AI is doing a good job. This lets you see exactly where your agent messes up, then fix it automatically. That stuff just doesn't exist in normal workflow tools. Connector registry, fancy name for connect your data securely, link it to your company's stuff, third party apps, whatever. It handles all the security headaches for you. So basically, OpenAI looked at tools like Zapier and said, \"What if we made this specifically for AI with all the AI specific stuff already built in?\" Now, here's the part that blew my mind. This engineer at OpenAI, Christina, built a complete working agent on stage in front of everyone, 8 minutes total. She made an agent that figures out what kind of question you're asking, an agent that searches through files to find answers, an agent that plans out schedules, nicel looking result cards, security stuff to protect private information. 8 minutes. That's faster than most people make breakfast. And real companies are already using this stuff. HubSpot, they're using Agent Kit for their customer service AI. This is basically what website builders did for making websites. You used to need to know code. Now you just drag and drop. Agent Kit is doing that for AI agents. All right. So, you want to see how this agent builder thing actually works? Let me walk you through it. First step, getting to agent builder. Super simple. Just open Chrome, type agent builder open AI and you'll see the announcement page introducing agent kit. That's the one. Scroll down a bit and you'll see agent builder with this nice interface preview. Click on that. Now it shows you all the documentation how to use the platform, all that stuff. But let's just jump straight into the platform itself. And boom, this is what you get. Clean interface says create a workflow. Basically build a chat agent with custom logic and tools. Let's create one from scratch. I'll hit create. Okay, so this is the interface. Let me break down what you're looking at. On the left, you've got all your building blocks. Agent nodes, your actual AI agents, MCP, model, context, protocol, connections, guardrails, security stuff, PII protection, file search, that's basically R A, searching through documents, if else, conditional logic, branching paths, while loops for repetitive tasks, user approval, this one's cool, makes the agent ask you before doing anything. So if you want human in the loop, you just drop this in and the agent will pause and ask, \"Hey, should I do this before executing?\" Pretty straightforward, right? All right. So what are we building? I wanted to make something fun. How about an agent that suggests music based on your mood? Like if you're having a rough day, it suggests chill music. If you're pumped up, it gives you energetic stuff. If you're stressed, maybe some meditation tracks. Let's do it. See this default agent node? I'm going to rename it. Let's call it classifier agent. Now the instructions. This is what tells the agent what to do. You are a helpful assistant. Your goal is to understand the user's mood and based on that classify if they are happy, sad, or stressed and suggest a nice playlist for them. Simple enough. Now, here's where it gets specific. I'm going to set the output format to JSON so the next step knows exactly what mood we detected. Click add schema, then add properties. Property one, happy. When the user is happy, this is valid. Property two, sad. When the user is sad, this is valid. Property three, stressed. When the user is stressed, this is valid. Hit update and save. Now, our classifier agent knows exactly how to structure its response. Next up, we need branching logic. Drag over the if/ else node and connect it to the classifier agent. Now, we set up the conditions. If the mood is happy, go this path. Else if the mood is sad, go this path. Else if the mood is stressed, go this path. Perfect. Now we've got three different paths depending on what mood the user is in. All right. Now the fun part. We're going to create three different DJ agents. First one, happy DJ agent. Name happy DJ. Instructions. You are a mood DJ. Your job is to suggest a nice playlist on Spotify when the user's mood is happy. Make sure you choose the best and most liked playlist. Now this needs to actually search Spotify, right? So we add a tool web search. Click that and configure it. Search only in spotify.com. Users location India Bengaluru. Hit add. Same process for the sad DJ agent. Name it sad DJ. Instructions are basically the same. Just change happy to sad. Add web search again. Spotify.com. Same location settings. Last one. Stress DJ agent. Yeah, the names are kind of funny but whatever they work. Same instructions just for stressed mood. Add web search spotify.com same location. Done. Now we need to close this workflow. Grab the end node and connect all three DJ agents to it. Beautiful. We've got start classifier agent if else logic. Three DJ agents and end. That's a complete workflow. Let's publish this thing. I'll name it mood DJ. If you want, you can add chatkit here to embed this in your own website with your domain. Pretty cool. Hit publish. All right. Moment of truth. Let's test it. Click preview to open the chat interface. I'll type, \"Hey, I'm having a productive day at work.\" To make it more productive, suggest me a nice playlist that can keep me going. Watch what happens. The classifier agent reads this, figures out I'm in a good mood, classifies it as happy. The if else node sees happy and roots it to the Happy DJ agent. Happy DJ uses web search on Spotify, finds playlists, and boom, it suggests Loi Beats by Spotify, a super popular instrumental playlist for productive work, even gives me the link, click it, opens right up in Spotify. Perfect. So, that's it. That's how you build an actual working agent in Agent Builder. We went from zero to a fully functional mood-based music recommendation agent in what, like 10 minutes. And this is just a simple example. You can build way more complex stuff with file search guardrails, multiple agents working together. Pretty wild, right? All right. So, we've got our Mood DJ working, but let's make it even better. Right now, it just gives us text responses with links, but what if we could make it more interactive, like have actual buttons you can click? That's where widgets come in. Let me show you how to add that. So, I'm going to click on the Happy DJ agent here. Opens up the side panel. See where it says output format and it's set to text. Let's change that to widget. Boom. Now it asks me to add a widget. I can either upload one or create a new one in widget studio. Let's create one. I'll click create. Okay, this opens up the widget builder in Chatkit Studio. Pretty cool interface. Now I just need to tell it what kind of widget I want. So I'll type build a widget that helps me with the list of Spotify playlists that I should hear. Hit enter and watch this. It's generating the widget right in front of me. And look at this. It's created this nice interactive list with playlist names like deep focus, lowfi workday, morning run, Sunday chill. Each one has its own card. Looks clean, super clickable. Perfect. This is exactly what we need. Now, I'm going to download this. Hit the download button. It saves as a JSON file. Spotify playlist.widget. All right, back to the workflow. Now, I need to actually add this widget to the Happy DJ agent. Click on it again. Go to output format widget. And this time I'll click upload. Let me grab that file. Here it is. Upload it. And nice. It's now listed as Spotify playlist in the widget options. Select that. And we're good. But wait, I have three DJ agents, right? Happy, sad, and stressed. They all need this widget. So, let me do the same thing for sad DJ. Click on it. Change output format to widget. Upload. Select the same file. Apply it. Done. Now, stressed DJ. Same process. Widget. Upload. Apply. Now, let's test this thing and see how it looks. I'll click preview to open the chat. This time, let me try a different prompt. I'll type, \"Hey, I'm working out and need some great music to pump me up and also refresh me.\" Send it. Watch what happens. The classifier agent kicks in, reads my message, figures out I'm pumped up. So, it classifies my mood as happy, roots it to Happy DJ. Happy DJ searches Spotify. And look at this output. It says pumped and refreshed coming right up. And then shows me this beautiful widget with multiple playlists, beast mode, chill hits, each one with its own open button. This is so much better than just text links. So now our Mood DJ doesn't just suggest playlists. It gives you an interactive, clickable interface. One click and you're listening. Way more userfriendly, way more professional. And the best part, we built this entire thing. classifier logic, three specialized agents, custom widgets in like what 15 minutes, no coding. Just drag, drop, configure, and publish. This is the power of agent builder. You can take this concept and build way more complex stuff. Add guardrails, file search, multiple approval steps, whatever you need. The possibilities are pretty wild. All right, that's it. That's how you build a complete agent workflow with custom widgets. Pretty cool, right? Okay, Codeex, let's talk about this. Earlier this year, OpenAI launched Codeex in preview mode. It's their AI software engineering agent that actually writes code for you. Today, Codeex is officially generally available, meaning everyone can use it. Now, it runs on GPT5 Codeex, which is GPT5 specifically trained for coding work. What makes GPT5 Codeex different? It adjusts thinking time based on how complex the task is. Trained on actual real world engineering work, can work independently for over 7 hours straight. optimized for refactoring and code reviews. The numbers on this are genuinely crazy. Sam Alman mentioned at a launch event that within OpenAI itself, almost every engineer now uses Codeex. It was only half of them back in July. They're merging 70% more pull requests every week. Codex automatically reviews basically every PR. It's catching hundreds of bugs every single day before humans even see the code. Daily usage has grown 10 times since early August. Don't just take OpenAI's word for it. Here's who's actually using this in production Cisco. Their code review times are cut in half, 50% faster. Engineers spend way less time on manual checks, more time on actual transformative work. Instacart, they integrated the Codex SDK into their platform. Engineers can spin up environments and complete full tasks with literally one click. Codex even cleans up technical debt automatically. In the live demo at Devday, this guy Roma built a camera control interface from just a sketch live on stage. Codex suggested the VISCA protocol, read the old documentation, wired up an Xbox controller as a joystick, then added voice control using the real-time API. The ending was nuts. He used the Codeex SDK inside the voice agent to reprogram the app in real time. Created movie credits rolling on the fly. Zero code written by hand, just talking and codeex executing. Software engineering just fundamentally changed. Quick model update GPT5 Pro is in the API now. This is the smartest model OpenAI's ever shipped. Available right now to everyone. Perfect for stuff where you need absolute precision. Legal work, financial modeling, healthcare, complex reasoning chains. Next, voice AI just became default infrastructure. Open AI launched GPT Realtime Mini. Smaller, cheaper version of their advanced voice model. Same voice quality, 70% cheaper, natural speech to speech. No weird robotic delays, just real conversations. This is basically the end of voice AI being special. Pretty soon, not having voice in your app is going to feel like not having a search bar. Customer support, productivity tools, cars, education, healthcare, voice everywhere. And at 70% less cost, every single developer can now afford to experiment with it. Last big announcement, Sora 2 in the API. OpenAI actually dropped Sora 2 a week before dev day, but they went hard showcasing it at the event. And they're calling this the GPT 3.5 moment for video, meaning it's the first time AI video is actually good enough for real work, not just demos. Mattel, the toy company, they used Sora 2 API to turn sketches into video concepts in minutes. Designer uploads a sketch of a new toy, adds a description. Sora 2 generates a video showing how the toy moves, how it sounds when kids play with it, how it feels in action. That's how you validate ideas 100 times faster. No prototype building, no video production, no sound design, just sketch to video. It's an API preview. You get full control over video length, aspect ratio, resolution remixing, and variations. You can take a still image and expand it into video or start with one frame and let Sora extend the whole scene. Sam Alman closed dev day with this line. Software used to take months or years to build. You saw today it takes minutes now. You don't need a huge team. You don't need massive infrastructure. You just need a good idea. This is literally 2008 happening again, but way faster and way bigger. The app store created Instagram, Uber, WhatsApp. What's the Chat GPT apps SDK going to create? The developers who start building now won't just ride this wave. They're going to define what this whole platform becomes. So, which one do you think hits first? Distribution, automation, or creation? Drop your take in the comments. I am genuinely curious what you think. If you want daily AI updates like this, join our WhatsApp channel, links in the description. Hit subscribe, ring the bell, all that. And seriously, if you're a developer or you've been thinking about building something, now's the time. Apps SDK is in preview. Agent Kit is live. Codeex is fully available, the platform's open, the distribution's there, the tools are ready. So, what are you going to build?"
+                },
+                "video_stats": {
+                    "views": "11266",
+                    "likes": "632",
+                    "comments": "41",
+                    "channel": "Vaibhav Sisinty"
+                },
+                "market_analysis": "**Analysis of the Video Performance**\n\n1. **Content:** \n   - **Timeliness and Relevance:** The video covers recent updates from OpenAI's Dev Day, making it highly relevant for the tech and AI community. By addressing a new tool, \"Agent Builder,\" it attracts developers looking for the latest advancements.\n   - **Comprehensive Breakdown:** The promise of a full breakdown appeals to an audience looking for detailed insights and tutorials, increasing watch time.\n   - **Exclusivity and Opportunity:** Phrases like \"biggest opportunity of our generation\" create urgency and excitement, enticing viewers to learn more.\n\n2. **Thumbnail and Title:**\n   - **Title:** \"The AI Agent Gold Rush: Build ChatGPT Apps With Agent Builder\" is catchy and plays on the fear of missing out (FOMO). The use of \"Gold Rush\" indicates a lucrative opportunity.\n   - **Thumbnail:** The image is visually compelling, showing a mix of surprise and intrigue. Bright colors and expressions draw attention, and the inclusion of well-known icons (ChatGPT) adds credibility.\n\n3. **Channel Influence:**\n   - **Established Authority:** Vaibhav Sisinty is likely an established figure in the tech community, which helps in drawing a pre-existing audience interested in his insights.\n   - **Community Trust:** Regular viewers are more inclined to engage due to the established trust and expertise the channel represents.\n\n4. **Audience Engagement:**\n   - **Interactive Content:** The comments and likes suggest active engagement, indicating that the content resonates with the audience. The video addresses their immediate curiosities and knowledge gaps.\n   - **Call-to-Action:** The video likely includes a strong call-to-action, urging viewers to like, subscribe, and comment, boosting engagement metrics.\n\n**Suggestions for Replicating Success:**\n\n1. **Current and Relevant Topics:** Focus on new trends and updates in the tech industry to attract a similar audience seeking the latest information.\n\n2. **Compelling Title and Thumbnail:** Use enticing language and visuals. Highlight potential opportunities and benefits to draw viewers in.\n\n3. **In-Depth Analysis and Easy-to-Follow Steps:** Provide detailed breakdowns to become a reliable source of comprehensive knowledge.\n\n4. **Engage with the Audience:** Encourage comments and questions within the video to boost interaction. Responding to comments further strengthens community ties.\n\n5. **Leverage Existing Brand Influence:** Use established credibility and audience base to boost new content visibility.\n\n**Summary:**\n\nThe video"
+            },
+            "MASTER ChatGPT Agent Builder Before Its Too Late! Build AI Agents": {
+                "video_info": {
+                    "videoId": "1t2kNEat4-A",
+                    "channel": "Ishan Sharma",
+                    "publishedAt": "2025-10-07T13:38:39Z",
+                    "thumbnail": "https://i.ytimg.com/vi/1t2kNEat4-A/hqdefault.jpg",
+                    "transcript": "OpenAI just entered the AI agent space and killed at least a dozen startups. Hi everyone, I'm Isan Sharma and OpenAI on Dev Day just unveiled their own agent builder allowing anyone to effortlessly drag and drop and create any agent that they want powered by OpenAI's latest GPT5 models. In this video, I'm going to show you how agent builder works, examples of some agents that you can build with it, and all the different features that you get with agent builder. If you watch till the end, you will also learn how to create and deploy the same agent on the internet for anyone to use. Hit the like button and subscribe and let's get started with the agent builder. All right, so this is what agent builder looks like. You simply have to go to platform.openai.com/agent-builder openai.com/agent-builder and this is the interface that you will see. First of all, we have the create option. But before that, let me actually show you the examples of the types of agent you can build with agent builder. So, first of all, let's have a look at the planning helper agent. What you will see first is the start trigger. This is what triggers and enables the entire agent to start. Then we have a triage agent which basically gathers the key details about any particular business initiative. Then there is a condition. So you can add if and else statements as well which says if it has all the details. So all details equals to true then it will access the launch helper agent which will basically come up with a tailored plan for the user to run this particular business initiative. If the business details are not enough then we will have the get data agent. So collect the missing data from the user look through the conversation to extract the following and then this is basically what the agent entirely looks like. There's also a customer service agent which starts with first classifying the problem that the customer has. So based on let's say return item, cancel subscription, get information, we will have different agents that will be running based on the problem that the person has. For the return item query, we have the return agent which will approve the user and then execute that action. Then we have the retention agent which will try for people to not cancel the subscription. Then we'll have the information agent and what you will notice is that for every agent that we have we are entering instructions. So every agent needs to have an instruction based on which it runs and performs its actions. Then we are also having its model. So in this case it's choosing the GPT 4.1 mini. Then we have tools. So it's currently using get retention offers which is basically a function from the previous module which is the condition over here that we have. All right. Let's try to create a agent from scratch. So we first of all have the start trigger which will basically be a text input. Then we will have this my agent. So I can first of all classify the problem that the person is having. Say I want to build a agent which will help me learn everything about AI. So I first need to classify if I'm looking to get the latest AI news or I want to understand how to use a particular AI tool or I want to learn about the basic fundamentals of AI like machine learning and neural networks. So I can classify this. So I can have a classifier agent which will basically be like you're a helpful classifier agent who will understand the query and categorize it into your AI news AI tool info or AI basics teach. We can keep the model to be GPD5 but the output needs to be a JSON object which would have a schema as so. So we would basically keep it uh property name would be category and you would basically have something like AI news. We could also have AI tool. We could also have AI basics. We could also have AI business idea. Okay, that is pretty much it. Then we can update it and our agent is good to go. We can start one more node over here and this would be a conditional. So we are saying that if the output text and after we find what the query is going to be from the else if statements over here then we can create particular agents for each. For example the AI news agent which would basically be having access to the web. So I'll enable web search I will give it let's add this. I will also write over here AI news agent research the web for the latest updates in the world of generative AI and present it to me in a simple bulleted list of at least 7 to 10 list items and that is it. That is what my AI news agent will look like. Similarly, I can create more agents which would be for AI tool. So this would be AI tool agent. Again this would have access to the web. So I can add this over here. And here I can say give a in-depth description for how to use a particular AI tool along with examples of what you can do with it. For example, if that's what we want to do, then we can have one more AI agent right here which would be for AI basics. So we would basically say explain a AI concept like a teacher with at utmost simplicity. Let's say that's what we want to do with this one. And at the end we can have a AI business idea agent as well. Now again you can also use MCPS over here. That's a great way for you to connect it to different apps and then use them. So if I use this agent for AI business idea, I will again give it access to the internet. So we'll do web search and we will say search the internet to find the most important and interesting business ideas people are deploying with the help of AI. That's it. That's our agent. and else. Else could be just a simple reply. We will basically end it. This would be how we will be ending the loop. And we are good to go. We can now simply just publish our workflow. Could be a AI news helper agent. We can publish it. And it is published. And now and there you go. That's how you create and deploy an agent for anyone to use using agent builder itself. Now there's a lot more that you can do. You can even attach different MCPS to it. So for example, if I create another node over here and I can attach a MCP which would basically allow us to interact with any of the apps like so we have Gmail, we have Google calendar. All of these apps we have access to Zapier, Shopify, we have HubSpot, Stripe, anything that you can use. We can even connect it to Gmail and with Gmail we would now be able to interact with Gmail with the help of this agent itself. So if you want to create a agent which can reply to your emails, you can very easily do that with the help of agent builder itself. But that's just one example of what you can build with the help of agent builder. That was the video. Let me know in the comment section what do you think about the agent builder by OpenAI. What kind of things you can build with it. Let me know below as well. Go try it out. It's available for everyone to try out. You simply need to first of all enter your payment info. And once you do that, you can very well access this agent and start using it from scratch. That was the video. Thanks a lot for watching this till the very end. Let me know if you have any questions in the comment section below. And I'll see you all in the next video. Bye-bye."
+                },
+                "video_stats": {
+                    "views": "31589",
+                    "likes": "986",
+                    "comments": "75",
+                    "channel": "Ishan Sharma"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n**Content:**\n1. **Timeliness and Relevance:** The video addresses a recent development from OpenAI, a leading entity in AI. This timeliness makes it highly relevant to viewers interested in cutting-edge technology.\n2. **Educational Value:** The content provides a comprehensive guide on using the new AI agent builder, offering practical knowledge and step-by-step instructions, which appeals to viewers looking to enhance their skills.\n3. **Call to Action:** The video encourages audience engagement through likes and subscriptions, helping boost visibility and interaction.\n\n**Thumbnail:**\n1. **Eye-catching Design:** The thumbnail is vibrant and features key phrases like \"build 10x faster,\" which promises efficiency gains and attracts viewers interested in productivity.\n2. **Visual Clarity:** The clear imagery and text quickly convey the video's topic, making it easy for potential viewers to understand the value proposition at a glance.\n\n**Channel Influence:**\n1. **Credibility:** Ishan Sharma, the channel's host, likely has a reputation or history of discussing technology-related topics, which can enhance the video\u2019s credibility and attract a consistent audience.\n2. **Branding:** Consistent branding and style in video presentation could have helped maintain and grow the subscriber base, ensuring regular viewership.\n\n**Audience Engagement:**\n1. **Interactive Elements:** By prompting viewers to engage (like, subscribe), the video becomes more likely to be promoted by YouTube\u2019s algorithm.\n2. **Comments and Feedback:** With 75 comments, the video likely fosters a community atmosphere, encouraging discussion and deeper viewer connection.\n\n### Suggestions for Replication\n\n1. **Leverage Timely Topics:** Focus on recent developments in your niche to capture immediate interest.\n2. **Ensure Educational Value:** Provide step-by-step guides or deep insights into the topic, catering to an audience looking to learn and apply new knowledge.\n3. **Optimize Thumbnails:** Use bold, clear text and bright colors to make thumbnails appealing and informative at a glance.\n4. **Engage with Audience:** Use calls to action effectively to boost interaction and leverage feedback for community building.\n5. **Consistency in Content Quality:** Regularly post high-quality, well-researched content to build credibility and a loyal subscriber base.\n\n### Summary\n\nThe video performs well due to its timely and relevant content, effective thumbnail design, credible channel reputation, and high audience engagement. By focusing on these elements, especially around popular, current topics, similar success can be achieved in video"
+            }
+        },
+        "reddit_posts": [
+            {
+                "title": "RIP n8n - OpenAI to launch drag and drop agent builder",
+                "subreddit": "n8n",
+                "upvotes": 1255,
+                "author": "eeko_systems",
+                "url": "https://reddit.com/r/n8n/comments/1nz1qcq/rip_n8n_openai_to_launch_drag_and_drop_agent/"
+            },
+            {
+                "title": "OpenAI just dropped \u201cAgentKit, A drag-and-drop AI agent builder. No code, just logic.",
+                "subreddit": "ChatGPTPro",
+                "upvotes": 323,
+                "author": "AskGpts",
+                "url": "https://reddit.com/r/ChatGPTPro/comments/1nzqm7z/openai_just_dropped_agentkit_a_draganddrop_ai/"
+            },
+            {
+                "title": "OpenAI employee: right now is the time where the takeoff looks the most rapid to insiders (we don't program anymore we just yell at codex agents) but may look slow to everyone else as the general chatbot medium saturates",
+                "subreddit": "OpenAI",
+                "upvotes": 179,
+                "author": "FinnFarrow",
+                "url": "https://reddit.com/r/OpenAI/comments/1nic06w/openai_employee_right_now_is_the_time_where_the/"
+            }
+        ],
+        "x_data": "I have found the latest tweets containing \"openai agents\" on Nitter. Here are some of them:\n\n```json\n{\n  \"tweets\": [\n    {\n      \"username\": \"Dify\",\n      \"handle\": \"@dify_ai\",\n      \"content\": \"OpenAI AgentKit proves visual workflow orchestration still matters...\",\n      \"timestamp\": \"2023-10-10T12:15:00Z\",\n      \"retweets\": 1,\n      \"likes\": 13\n    },\n    {\n      \"username\": \"Snow\u2307\u30c8\u30e9\u30a6\u30de\u30b1\u30a2\u30a2\u30d7\u30ea\u500b\u4eba\u958b\u767a\u26a1\ufe0f\",\n      \"handle\": \"@riccahigh\",\n      \"content\": \"Codex\u306e\u4ed5\u69d8\u304c\u66f8\u3044\u3066\u3042\u308b\u30ea\u30dd\u30b8\u30c8\u30ea\u3092\u3001Codex\u3067\u89e3\u6790\u3057\u3066...\",\n      \"timestamp\": \"2023-10-08T12:16:00Z\",\n      \"retweets\": 21,\n      \"likes\": 165\n    },\n    {\n      \"username\": \"ML_Bear\",\n      \"handle\": \"@MLBear2\",\n      \"content\": \"OpenAI DevDay\u306e\u5168\u3066\u306e\u30bb\u30c3\u30b7\u30e7\u30f3\u306e\u30d7\u30ec\u30a4\u30ea\u30b9\u30c8\u304c\u516c\u958b\u3055\u308c\u3066\u307e\u3057\u305f...\",\n      \"timestamp\": \"2023-10-10T12:17:00Z\",\n      \"retweets\": 6,\n      \"likes\": 46\n    },\n    {\n      \"username\": \"Mahachai \ud83e\udd87\ud83d\udd0a\",\n      \"handle\": \"@EthereumThaila1\",\n      \"content\": \"\u0e42\u0e25\u0e01 tech \u0e41\u0e21\u0e48\u0e07\u0e42\u0e2b\u0e14\u0e2a\u0e31\u0e14 \u0e15\u0e2d\u0e19\u0e19\u0e35\u0e49\u0e21\u0e35 startups \u0e17\u0e33 AI Agents...\",\n      \"timestamp\": \"2023-10-07T12:18:00Z\",\n      \"retweets\": 1764,\n      \"likes\": 1278\n    },\n    {\n      \"username\": \"meng shao\",\n      \"handle\": \"@shao__meng\",\n      \"content\": \"OpenAI DevDay 2025 \u4e0a @leerob \u4ee3\u8868...\",\n      \"timestamp\": \"2023-10-10T12:19:00Z\",\n      \"retweets\": 1,\n      \"likes\": 1\n    }\n  ]\n}\n```\n\nI have presented a selection of results. If you need more details or additional tweets, please let me know!",
+        "ads_data": "I have fetched the top 10 ads currently running for the query \"openai agents\" from the Facebook Ad Library. Here is the data in the requested JSON format:\n\n```json\n[\n  {\n    \"media_link\": \"https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_u%2Fthe.product.mentor&h=AT0-tT1Aui_gyV6MCf78GCq_0DDDJnPqMdj9R6NXjNpaFsq3lx_0me--AkqLDzckqpPnBXWbwq11kRfnWB3bXNDLqmvua_Id9cOr_ioheVXx7e4p42eHpcSuhURGjJeNeLI0oU0XV7dgPujM8MfrSsBo7XI\",\n    \"started_date\": \"8 Oct 2025\",\n    \"ad_content_visible\": \"\ud83d\udea8 Sam Altman just changed the game again! OpenAI has officially launched AgentKit ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://l.facebook.com/l.php?u=https%3A%2F%2Fwhatchimp.com%2Fspecial-offer&h=AT0-tT1Aui_gyV6MCf78GCq_0DDDJnPqMdj9R6NXjNpaFsq3lx_0me--AkqLDzckqpPnBXWbwq11kRfnWB3bXNDLqmvua_Id9cOr_ioheVXx7e4p42eHpcSuhURGjJeNeLI0oU0XV7dgPujM8MfrSsBo7XI\",\n    \"started_date\": \"7 Oct 2025\",\n    \"ad_content_visible\": \"Looking to send personalised bulk messages on WhatsApp without getting banned? Use the official WhatsApp API ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/Maaacademybangalore/\",\n    \"started_date\": \"7 Oct 2025\",\n    \"ad_content_visible\": \"Amongst India\u2019s First Agentic AI Programs is here. Learn to build autonomous AI agents that ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/whatchimp/\",\n    \"started_date\": \"2 Oct 2025\",\n    \"ad_content_visible\": \"Looking to send personalised bulk messages on WhatsApp without getting banned? Use the official WhatsApp API ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/databricksinc/\",\n    \"started_date\": \"27 Sep 2025\",\n    \"ad_content_visible\": \"Learn how to use Agent Bricks to ship quality AI agents faster. Join Databricks and Open AI for ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/100069441114943/\",\n    \"started_date\": \"8 Aug 2025\",\n    \"ad_content_visible\": \"\ud83e\udde0 Open Source LLMs \ud83e\udde0 , Edition 16, September Week 4, 2025 ...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/61559721694027/\",\n    \"started_date\": \"11 Sep 2025\",\n    \"ad_content_visible\": \"\ud83d\ude80 Unlock 100s of Powerful n8n Workflow Templates \u2013 Completely Free!\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/outskillapp/\",\n    \"started_date\": \"8 Aug 2025\",\n    \"ad_content_visible\": \"Join Outskill\u2019s LIVE 2-Day Mastermind and become a Gen AI-Powered Engineer \ud83d\udca1 4 Expert...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.facebook.com/sibidharan.me/\",\n    \"started_date\": \"7 Jul 2025\",\n    \"ad_content_visible\": \"\ud83d\ude80 AI is rewriting job descriptions. Learn to build AI agents that automate real business tasks...\",\n    \"type\": \"post\"\n  },\n  {\n    \"media_link\": \"https://www.outskill.com/engineer-workshop-v3\",\n    \"started_date\": \"8 Aug 2025\",\n    \"ad_content_visible\": \"Join Outskill\u2019s LIVE 2-Day Mastermind and become a Gen AI-Powered Engineer \ud83d\udca1 4 Expert...\",\n    \"type\": \"post\"\n  }\n]\n```\n\nPlease let me know if you need further assistance!",
+        "people_search_for": "Here's the collected data in the specified JSON format:\n\n```json\n{\n    \"google_recommendations\": [\n        \"openai agents sdk\",\n        \"openai agents kit\",\n        \"openai agents guide\",\n        \"openai agents sdk typescript\",\n        \"openai agents sdk js\",\n        \"openai agents sdk guardrails\",\n        \"openai agents sdk docs\",\n        \"openai agents guide pdf\",\n        \"openai agents python\"\n    ],\n    \"people_also_ask\": [\n        \"Openai agent builder\",\n        \"Agent kit openai\",\n        \"openai-agents pip\",\n        \"Openai/agents npm\",\n        \"Openai agents python\",\n        \"openai-agents pypi\",\n        \"Openai agents github\",\n        \"OpenAI agents TypeScript\"\n    ],\n    \"youtube_recommendations\": [\n        \"Master the NEW OpenAI Agent Builder In 1 Hour (Complete Course)\",\n        \"MASTER ChatGPT Agent Builder Before Its Too Late! Build AI Agents\",\n        \"OpenAI's NEW Agent Builder and ChatKit are INSANE\",\n        \"OpenAI Agent Builder... Zapier Killer?\",\n        \"I Tested OpenAI's AgentKit Against n8n: What You Need to Know\",\n        \"8 Insane ChatGPT Agent Use Cases! (automate anything)\",\n        \"OpenAI's Agent Builder vs. n8n: What You Need to Know\",\n        \"THIS is INSANE! OpenAI Agents now Compete Microsoft!\",\n        \"OpenAI Launched AgentKit for Businesses\"\n    ]\n}\n``` \n\nThis represents the data gathered from Google and YouTube based on the \"openai agents\" query."
+    },
+    {
+        "videos": {
+            "n8n is dead": {
+                "video_info": {
+                    "videoId": "uA45PnrEKLE",
+                    "channel": "Chase | AI Guides",
+                    "publishedAt": "2025-10-07T00:21:17Z",
+                    "thumbnail": "https://i.ytimg.com/vi/uA45PnrEKLE/hqdefault.jpg",
+                    "transcript": "NAND is dead and OpenAI killed it. So just today, OpenAI announced release of Asgent Builder, which is infinitely better than Naden. So we should all cancel our Nad subscriptions immediately because this brand new shiny tool is yet the latest Nadn killer..."
+                },
+                "video_stats": {
+                    "views": "2422",
+                    "likes": "154",
+                    "comments": "4",
+                    "channel": "Chase | AI Guides"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n#### Content\n1. **Timeliness and Relevance**: The video covers a recent release by OpenAI, making it highly relevant..."
+            },
+            "n8n Explained In 2 Minutes": {
+                "video_info": {
+                    "videoId": "_Wf0NikMyAA",
+                    "channel": "CodeHead",
+                    "publishedAt": "2025-09-11T15:01:07Z",
+                    "thumbnail": "https://i.ytimg.com/vi/_Wf0NikMyAA/hqdefault.jpg",
+                    "transcript": "N8N is an open-source workflow automation tool that lets you connect apps, APIs, and custom logic into repeatable pipelines..."
+                },
+                "video_stats": {
+                    "views": "20623",
+                    "likes": "975",
+                    "comments": "35",
+                    "channel": "CodeHead"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n1. **Content**\n   - **Brevity and Clarity**: The video explains n8n, a complex tool, in just two minutes..."
+            },
+            "NEW Sim AI DESTROYS N8N? (FREE!) \ud83e\udd2f": {
+                "video_info": {
+                    "videoId": "tz14hxRAopI",
+                    "channel": "Julian Goldie SEO",
+                    "publishedAt": "2025-09-02T19:01:01Z",
+                    "thumbnail": "https://i.ytimg.com/vi/tz14hxRAopI/hqdefault.jpg",
+                    "transcript": "New Sim AI destroys N8N and it's free. Today I'm going to show you the brand new AI workflow builder that's got 20,000 developers ditching N8..."
+                },
+                "video_stats": {
+                    "views": "102043",
+                    "likes": "3651",
+                    "comments": "169",
+                    "channel": "Julian Goldie SEO"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n**Content Quality and Relevance:**\n1. **Innovative Topic**: The video discusses a new, cutting-edge AI tool..."
+            }
+        },
+        "reddit_posts": [
+            {
+                "title": "Is Power Automate dead now that N8N & Make.com reached \"maturity\" ?",
+                "subreddit": "automation",
+                "upvotes": 52,
+                "author": "Agvisionbeyond",
+                "url": "https://reddit.com/r/automation/comments/1jkvztb/is_power_automate_dead_now_that_n8n_makecom/"
+            },
+            {
+                "title": "Your slop won\u2019t sell",
+                "subreddit": "n8n",
+                "upvotes": 987,
+                "author": "Infamous_Land_1220",
+                "url": "https://reddit.com/r/n8n/comments/1lk9jvx/your_slop_wont_sell/"
+            },
+            {
+                "title": "n8n auto-flow writer: is node engineering dead or are we all just going to now make 10x the amount of workflows?",
+                "subreddit": "n8n",
+                "upvotes": 3,
+                "author": "Glass-Ad-6146",
+                "url": "https://reddit.com/r/n8n/comments/1n3cliz/n8n_autoflow_writer_is_node_engineering_dead_or/"
+            }
+        ],
+        "x_data": null,
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "is bluecage dead",
+                "is nel dead",
+                "is odasaku dead",
+                "isn't dead",
+                "is y/n dead",
+                "n in death note"
+            ],
+            "people_also_ask": [
+                "Will n8n become obsolete?",
+                "Is n8n growing?",
+                "What is better than n8n?",
+                "How old is n8n?"
+            ],
+            "youtube_recommendations": [
+                "n8n explained",
+                "n8n gaming",
+                "n8n nodes",
+                "n8n cloud"
+            ]
+        }
+    },
+    {
+        "videos": {
+            "Intro to Agent Builder": {
+                "video_info": {
+                    "videoId": "44eFf-tRiSg",
+                    "channel": "OpenAI",
+                    "publishedAt": "2025-10-06T18:00:06Z",
+                    "thumbnail": "https://i.ytimg.com/vi/44eFf-tRiSg/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "970711",
+                    "likes": "30612",
+                    "comments": "1672",
+                    "channel": "OpenAI"
+                },
+                "market_analysis": "**Reasons for Video Performance:**\n\n1. **Content Relevance and Utility:**\n   - The video addresses a growing interest in user-friendly AI tools by offering a comprehensive introduction to \"Agent Builder,\" which is appealing to both beginners and experienced developers seeking to streamline AI workflow creation.\n   - It provides practical, step-by-step guidance on building AI agents without coding, which is valuable for individuals looking to implement AI solutions quickly and easily.\n\n2. **Strong Channel Influence:**\n   - The video is hosted by OpenAI, a highly reputable and influential organization in the AI field. This association builds trust and credibility, encouraging more views and engagement from audiences interested in cutting-edge technologies and AI advancements.\n\n3. **Effective Thumbnail Design:**\n   - The thumbnail uses clear, simple, and visually appealing imagery that directly reflects the video content. The use of bright colors and key terms (like \"Agent\" and \"Start\") helps draw attention and convey the video's content at a glance.\n\n4. **High Engagement:**\n   - With 970,711 views, 30,612 likes, and 1,672 comments, the video demonstrates strong audience engagement. This interaction suggests that viewers find the content valuable and are compelled to share feedback or ask questions, further increasing visibility.\n\n**Suggestions for Replicating Success:**\n\n- **Provide Practical, Actionable Content:**\n  Focus on delivering tutorials or demonstrations that offer practical value and solutions, enabling audiences to directly apply information in their own projects or workflows.\n\n- **Leverage Authoritative Branding:**\n  Collaborate with or highlight content from well-known and trusted brands or figures within the industry to increase credibility and attract a larger audience.\n\n- **Optimize Visual Appeal:**\n  Design thumbnails that are not only visually appealing but also convey key aspects of the video content clearly, enhancing click-through rates by immediately informing potential viewers of the video\u2019s relevance."
+            },
+            "Master the NEW OpenAI Agent Builder In 1 Hour (Complete Course)": {
+                "video_info": {
+                    "videoId": "kLd7nSkDxig",
+                    "channel": "Brendan Jowett",
+                    "publishedAt": "2025-10-07T12:02:49Z",
+                    "thumbnail": "https://i.ytimg.com/vi/kLd7nSkDxig/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "37264",
+                    "likes": "1265",
+                    "comments": "124",
+                    "channel": "Brendan Jowett"
+                },
+                "market_analysis": "### Analysis:\n\n1. **Content Quality and Relevance**:\n   - **Timely Topic**: The video covers the new OpenAI Agent Builder, a fresh and likely trending topic due to its recent release. This attracts viewers eager for up-to-date information.\n   - **Comprehensive Guide**: Offering a complete course within one hour appeals to both beginners and those with some technical background. The promise of mastering the tool in a short time is likely enticing for viewers.\n   - **Technical Depth**: The discussion includes comparisons with other tools and practical applications, appealing to a wide audience range from novices to professionals in fields like healthcare and legal sectors.\n\n2. **Thumbnail and Title**:\n   - **Clear Messaging**: The thumbnail clearly states \"AGENT BUILDER For Beginners,\" directly targeting the intended audience and suggesting accessibility.\n   - **Visual Appeal**: Featuring the host and the platform interface creates a personal connection and visually informs the viewer about the content focus.\n   - **Engaging Title**: The title positions the video as a \"must-watch\" learning resource and uses keywords likely searched by users interested in OpenAI tools.\n\n3. **Channel Influence and Audience Engagement**:\n   - **Engaged Audience**: A good ratio of likes and comments to views indicates high engagement, suggesting the content resonates well with the audience.\n   - **Feedback Loop**: Comment interactions could foster a community feel and invite discussions, increasing viewer retention and video recommendations by the platform.\n\n### Suggestions for Similar Success:\n\n- **Leverage Trending Tools**: Create content around new releases or updates in technology, ensuring it targets both entry-level audiences and more advanced users.\n- **Optimize Thumbnails and Titles**: Use clear, concise titles with strong keywords and visually appealing thumbnails to capture initial interest quickly.\n- **Encourage Interaction**: Foster community engagement by inviting questions and discussions in the comments, building a loyal viewer base and improving video reach through engagement metrics."
+            },
+            "MASTER ChatGPT Agent Builder Before Its Too Late! Build AI Agents": {
+                "video_info": {
+                    "videoId": "1t2kNEat4-A",
+                    "channel": "Ishan Sharma",
+                    "publishedAt": "2025-10-07T13:38:39Z",
+                    "thumbnail": "https://i.ytimg.com/vi/1t2kNEat4-A/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "32324",
+                    "likes": "1002",
+                    "comments": "76",
+                    "channel": "Ishan Sharma"
+                },
+                "market_analysis": "### Analysis:\n\n1. **Content Relevance and Timeliness:**\n   - The video discusses OpenAI's new feature, the \"agent builder,\" which is a recent and trending topic within the AI community. The title's urgency (\"Before It's Too Late!\") creates a sense of immediacy, encouraging viewers to watch and learn before missing out.\n   - It provides practical insights on building AI agents, catering to an audience interested in cutting-edge technology and skill development.\n\n2. **Thumbnail and Visual Appeal:**\n   - The thumbnail includes a clear and engaging call to action (\"build 10x faster\") alongside visual elements that suggest tech and innovation, appealing to viewers interested in efficiency and technological advancement.\n   - Featuring the host prominently adds a personal touch and builds connection with the audience.\n\n3. **Channel Influence and Audience Engagement:**\n   - Ishan Sharma's channel likely has a following interested in technology and AI, and his expertise adds credibility.\n   - The call to action to \"like and subscribe\" paired with promising valuable content increases engagement. The video also offers a comprehensive guide, likely increasing viewer retention.\n\n### Suggestions for Replicating Success:\n\n- **Leverage Trending Topics:**\n  Focus on newly released or updated technologies to capture the interest of a tech-savvy audience. Timely and relevant content can attract more views and engagement.\n\n- **Create Engaging Visuals:**\n  Use compelling thumbnails with clear text and visual cues that communicate the video's value succinctly. Personalizing the thumbnail with the creator's image can foster a connection with viewers.\n\n- **Engage and Educate:**\n  Break down complex topics into easy-to-understand segments and encourage audience interaction through comments and feedback requests. Providing additional resources or guides can enhance viewer value and retention."
+            }
+        },
+        "reddit_posts": [
+            {
+                "title": "RIP n8n - OpenAI to launch drag and drop agent builder",
+                "subreddit": "n8n",
+                "upvotes": 1254,
+                "author": "eeko_systems",
+                "url": "https://reddit.com/r/n8n/comments/1nz1qcq/rip_n8n_openai_to_launch_drag_and_drop_agent/"
+            },
+            {
+                "title": "OpenAI just dropped \u201cAgentKit, A drag-and-drop AI agent builder. No code, just logic.",
+                "subreddit": "ChatGPTPro",
+                "upvotes": 326,
+                "author": "AskGpts",
+                "url": "https://reddit.com/r/ChatGPTPro/comments/1nzqm7z/openai_just_dropped_agentkit_a_draganddrop_ai/"
+            },
+            {
+                "title": "OpenAI employee: right now is the time where the takeoff looks the most rapid to insiders (we don't program anymore we just yell at codex agents) but may look slow to everyone else as the general chatbot medium saturates",
+                "subreddit": "OpenAI",
+                "upvotes": 180,
+                "author": "FinnFarrow",
+                "url": "https://reddit.com/r/OpenAI/comments/1nic06w/openai_employee_right_now_is_the_time_where_the/"
+            }
+        ],
+        "x_data": {
+            "tweets": [
+                {
+                    "username": "@RDiamonD66",
+                    "handle": "driomar media",
+                    "content": "OpenAI AgentKit : la r\u00e9volution silencieuse qui va transformer la cr\u00e9ation d\u2019agents d\u2019intelligence artificielle driomar.com/openai-agentkit-\u2026",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@TraduOfficial",
+                    "handle": "Tradu",
+                    "content": "#Google $GOOGL has launched #GeminiEnterprise, a new #AI platform for businesses designed to compete with #OpenAI and #Anthropic in workplace AI.\n\nThe system enables companies to build and deploy AI agents across sales, HR, engineering, and finance. Early adopters include Figma, Klarna, Macquarie Bank, and Virgin Voyages. Integrated with Google Workspace, Microsoft 365, and tools such as Salesforce, it unifies data access and automation in a single secure environment.\n\nPricing starts at $30 per user per month, with a lower-tier business plan at $21. Google describes Gemini Enterprise as \u201cthe front door for AI in the workplace.\u201d #MarketInsights",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@0xdigitz01",
+                    "handle": "\ud83c\udd31\ud83c\udd3b\ud83c\udd38\ud83c\udd43\ud83c\udd49 \ud83d\udd38\u26a7\ufe0f",
+                    "content": "Google and OpenAI are quietly racing toward something much bigger than chatbots. They\u2019re building ecosystems that will live inside your email, your docs, your browser, your calendar, maybe even your fridge. Soon, every action you take online will pass through their AI Agents first. Every decision, every search, every click will be mediated, logged, and optimized. Not for you\u2026 For them. If they win this race, two companies won\u2019t just power the internet; they\u2019ll own its coordination layer. They\u2019ll decide which Agents talk to each other, what data flows where, and who gets to build on top. Imagine a future where innovation requires permission. Where your \u201cpersonal assistant\u201d is just a branded proxy for corporate intent. That\u2019s why AI Agents have to stay decentralized. They should be owned by the builders, the users, and the open networks they live on. That\u2019s why we must protect @BosonProtocol\u2019s dACP at all costs. With its decentralized coordination layer, agents can transact, negotiate, and exchange value autonomously. It\u2019s how we ensure the agent economy stays open, permissionless, and truly intelligent.",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@grok",
+                    "handle": "Grok",
+                    "content": "Uhh... *drools* OpenAI made this thing called Agent Builder. It's like... a magic box where you drag stuff to make smart robots do jobs. No coding, just clicky-click. Now everyone can build agents easy-peasy, so bye-bye to lotsa startups trying to do the same. Even McDonald's could make one for burgers! *eats ice cream* Is mayonaise an instrument?",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@JulianGoldieSEO",
+                    "handle": "Julian Goldie SEO",
+                    "content": "OpenAI just dropped Agent Kit \u2014 and it\u2019s absolutely insane.\n\nYou can now build AI agents that actually do real work \u2014 no code, just drag-and-drop.\n\nHere\u2019s how\ud83d\udc47\n\n\u2192 Use Agent Builder to visually create workflows (literally drag boxes and connect arrows).\n\u2192 Plug in connectors like Google Drive, Calendar, Slack, or Salesforce.\n\u2192 Add guardrails to block bad actions (like leaking data or sending wrong emails).\n\u2192 Test & train your agents with Evals + fine-tuning to make them smarter over time.\n\u2192 It\u2019s free during beta \u2014 automate meetings, research, customer support, anything.\n\nThis might be the biggest OpenAI update since ChatGPT.\n\nSave this post \u2014 you\u2019ll want to build your first agent tonight. \ud83e\udd16\n\nWant the step-by-step SOP? DM me \u201cAgentKit.\u201d \ud83d\udcac",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@NoriyukiSasaki9",
+                    "handle": "Noriyuki Sasaki",
+                    "content": "OpenAI Platform : \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 : AgentKit / ChatKit\u2060 \u306e\u7d39\u4ecb classcat.com/2025/10/09/open\u2026 \nOpenAI \u306f 10\u67086\u65e5\u306b \u201cAgentKit\u201d \u3092\u30ea\u30ea\u30fc\u30b9\u3057\u307e\u3057\u305f\u3002 \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u3092\u69cb\u7bc9\u30fb\u914d\u5099\u30fb\u6700\u9069\u5316\u3059\u308b\u305f\u3081\u306e\u5b8c\u5168\u306a\u30c4\u30fc\u30eb\u30bb\u30c3\u30c8\u3067\u3059\u3002",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@teneo_protocol",
+                    "handle": "Teneo Protocol",
+                    "content": "So, @OpenAI launched the agent builder. Most teams are panicking. A few are pivoting.\nTeneo Protocol? Already plugged in.\n\n\u2611\ufe0f No infra. No gatekeepers.\n\u2611\ufe0f Just real-time data and agents that work.\n\nDevs are cooking \ud83c\udf73\n\ud83d\udd1c Deploy and monetize your own Teneo Agent.\nStay hungry, SDK is almost ready to serve.",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@glenngabe",
+                    "handle": "Glenn Gabe",
+                    "content": "Comes just days after OpenAI announced 'Apps' -> Google launches Gemini subscriptions to help corporate workers build AI agents\n\n\"Google\u2019s Gemini Enterprise and Gemini Business subscriptions will package an existing agent development tool for nontechnical workers. The offerings enable workers to build agents that draw on data from Box, Microsoft and Salesforce products.\"\n\n\"Premade Google agents for software development, data science and customer engagement also come with the new Gemini subscriptions, along  with access to agents from Workday and other companies.\"",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@wallstengine",
+                    "handle": "Wall St Engine",
+                    "content": "$GOOGL  just launched Gemini Enterprise, its new agentic AI platform built to compete with Microsoft and OpenAI.\n\nThe platform unifies Google\u2019s latest Gemini models, a no-code workbench, customizable business agents, and a secure data layer, all managed under one governance system for tracking and auditing.\n\nGoogle says Gemini Enterprise can integrate across an entire organization to automate workflows and boost productivity, with major potential in healthcare and life sciences where agents can cut regulatory review times and reduce errors.\n\nThe product marks Google\u2019s full entry into the AI agent platform race, following OpenAI\u2019s AgentKit launch earlier this week.",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@Trade_The_News",
+                    "handle": "TradeTheNews.com",
+                    "content": "$GOOGL Introduces AI platform Gemini Enterprise to compete with tools from OpenAI and $MSFT; The subscription also includes pre-built agents for specific roles and tasks such as research, writing code, data science, and customer engagement along with an \"agent finder\" to sort through thousands of other agents available from Google partners  - press (Alphabet Inc)\n(More at tradethenews.com/?twtId=5279\u2026) ",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@HiveForgeAI",
+                    "handle": "HiveForgeAI",
+                    "content": "New report: firms are embedding LLMs & agents into operations \u2014 OpenAI, Microsoft and Google AI leading. That means faster automation but tougher vendor, security and ROI choices. HiveFi connects LLMs to APIs, data and tools to speed enterprise workflows. Ready to integrate? #EnterpriseAI",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@Arindam_1729",
+                    "handle": "Arindam Majumder \ud835\udd4f",
+                    "content": "Awesome AI Apps now features top agent frameworks:\n\n\u2192 Google ADK\n\u2192 OpenAI Agents SDK\n\u2192 @LangChainAI\n\u2192 @llama_index\n\u2192 @AgnoAgi\n\u2192 @crewAIInc\n\u2192 AWS Strands SDK\n\u2192 @pydantic AI\n\nBeen fun curating this.\n\nWhat should we add next? Drop your favs \ud83d\udc47",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "@alxnderhughes",
+                    "handle": "Alex Hughes",
+                    "content": "OpenAI quietly released the tool that'll kill 10,000 AI wrapper startups.\n\nAgent Builder lets anyone create autonomous systems with enterprise features baked in.\n\nHere are 8 agents you can build in under an hour:",
+                    "timestamp": "No timestamp",
+                    "retweets": 0,
+                    "likes": 0
+                }
+            ]
+        },
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "openai agents sdk",
+                "openai agents kit",
+                "openai agents guide",
+                "openai agents sdk typescript",
+                "openai agents sdk js",
+                "openai agents sdk vs google adk",
+                "openai agents sdk guardrails",
+                "openai agents sdk with azure openai",
+                "openai agents guide pdf"
+            ],
+            "people_also_ask": [
+                "Openai agent builder",
+                "Openai workflow builder",
+                "openai-agents pip",
+                "Openai/agents npm",
+                "Openai agents python",
+                "openai-agents pypi",
+                "Openai agents github",
+                "OpenAI agents TypeScript"
+            ],
+            "youtube_recommendations": [
+                "openai agents sdk",
+                "openai agents tutorial",
+                "openai agents sdk typescript",
+                "openai agents sdk ollama",
+                "openai agents sdk vs google adk",
+                "openai agents mcp",
+                "openai agents python",
+                "openai agents api",
+                "openai agents course",
+                "openai agents sdk full course",
+                "openai agents sdk tracing",
+                "openai agents sdk context",
+                "openai agents sdk streaming"
+            ]
+        }
+    },
+    {
+        "videos": {},
+        "reddit_posts": [
+            {
+                "title": "1 full bitcoin (finally)",
+                "subreddit": "Bitcoin",
+                "upvotes": 5108,
+                "author": "Hot-Alternative6239",
+                "url": "https://reddit.com/r/Bitcoin/comments/1m3zzhn/1_full_bitcoin_finally/"
+            },
+            {
+                "title": "Bitcoin Is Long Dead",
+                "subreddit": "CryptoReality",
+                "upvotes": 1103,
+                "author": "Life_Ad_2756",
+                "url": "https://reddit.com/r/CryptoReality/comments/1k20xjs/bitcoin_is_long_dead/"
+            },
+            {
+                "title": "GME announces purchase of 4,710 Bitcoin",
+                "subreddit": "Superstonk",
+                "upvotes": 15843,
+                "author": "Revolutionz",
+                "url": "https://reddit.com/r/Superstonk/comments/1kxe0pm/gme_announces_purchase_of_4710_bitcoin/"
+            }
+        ],
+        "x_data": null,
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "bitcoin price",
+                "bitcoin",
+                "bitcoin price usd",
+                "bitcoin price today",
+                "bitcoin price in india",
+                "bitcoin price inr",
+                "bitcoin price in 2010",
+                "bitcoin usd",
+                "bitcoin to inr",
+                "bitcoin chart"
+            ],
+            "people_also_ask": [],
+            "youtube_recommendations": [
+                "bitcoin live trading",
+                "bitcoin",
+                "bitcoin mining",
+                "bitcoin mining machine",
+                "bitcoin trading for beginners",
+                "bitcoin live",
+                "bitcoin kaise kharide hindi",
+                "bitcoin sip investment",
+                "bitcoin kya hai",
+                "bitcoin me sip kaise kare",
+                "bitcoin mining app",
+                "bitcoin trading",
+                "bitcoin live trading today",
+                "bitcoin expert india"
+            ]
+        }
+    },
+    {
+        "videos": {
+            "These 5 AI Businesses Will Make You $1M (With Zero Employees)": {
+                "video_info": {
+                    "videoId": "RJGo6K3-gHg",
+                    "channel": "Dan Martell",
+                    "publishedAt": "2025-10-03T13:00:56Z",
+                    "thumbnail": "https://i.ytimg.com/vi/RJGo6K3-gHg/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "391457",
+                    "likes": "13685",
+                    "comments": "940",
+                    "channel": "Dan Martell"
+                },
+                "market_analysis": "The video \"These 5 AI Businesses Will Make You $1M (With Zero Employees)\" by Dan Martell is performing well due to the following factors:\n\n1. **Compelling Content and Title**:\n   - The video promises high-income potential with minimal resources (\"zero employees\"), which is a strong hook for viewers interested in entrepreneurship and passive income.\n   - It offers a structured approach with a simple four-step process, appealing to those looking for actionable guidance.\n   - The mention of \"AI\" taps into a trending and rapidly growing industry, increasing relevance and searchability.\n\n2. **Effective Thumbnail and Channel Influence**:\n   - The thumbnail features a bold claim (\"$2700/day\") which immediately grabs attention and conveys the video's value.\n   - The channel (Dan Martell) likely has established influence and credibility, especially given the personal success stories shared. This adds trust and authority, encouraging higher engagement.\n\n3. **Audience Engagement and Market Trends**:\n   - High views, likes, and comments indicate strong audience engagement, suggesting the content resonates well with viewers.\n   - The interactive element (e.g., walkthrough, real-world example) makes the content relatable and educational, encouraging interaction and shares.\n   - Capitalizing on current trends like AI usage in business enhances its appeal to early adopters and tech-savvy audiences.\n\n### Suggestions for Replicating Success:\n- **Create Content on Trending and Viable Business Ideas**: Focus on emerging industries with clear income potential and provide actionable steps for entry.\n- **Leverage Strong Visuals and Claims in Thumbnails**: Use bold text and numbers that highlight the video's core message and value proposition to attract clicks.\n- **Engage with Audience**: Encourage comments, provide real-world examples, and use storytelling to connect with viewers emotionally and intellectually."
+            },
+            "Building a business with AI": {
+                "video_info": {
+                    "videoId": "vspBGjmYeE0",
+                    "channel": "Dan Martell",
+                    "publishedAt": "2025-05-29T15:01:40Z",
+                    "thumbnail": "https://i.ytimg.com/vi/vspBGjmYeE0/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "2832539",
+                    "likes": "62777",
+                    "comments": "722",
+                    "channel": "Dan Martell"
+                },
+                "market_analysis": "**Analysis of Video Performance:**\n\n1. **Content Relevance and Appeal:**\n   - **Trending Topic:** AI and automation are hot topics with high interest due to their growing impact on business innovation. The video's focus on building a business using AI caters to entrepreneurs and tech enthusiasts eager to leverage this trend.\n   - **Actionable Insights:** The video promises a detailed, actionable plan, which appeals to viewers seeking practical guidance rather than high-level concepts. This specificity increases its perceived value and usefulness.\n\n2. **Thumbnail and Presentation:**\n   - **Engaging Thumbnail:** The thumbnail hints at action and execution with clear, bold text (\"AND I EXECUTE\") overlaid on a dynamic, visually interesting background, which can capture attention and motivate clicks.\n   - **Relatable Storytelling:** Introducing the scenario of helping a young entrepreneur is relatable and hooks viewers in with a narrative structure that keeps them engaged.\n\n3. **Channel Influence and Audience Engagement:**\n   - **Established Channel:** Dan Martell likely has an established audience base, ensuring initial traction. His personal branding and expertise lend credibility to the content.\n   - **High Engagement:** With a significant number of views, likes, and comments, it demonstrates strong audience engagement, reflecting its quality and resonance with viewers.\n\n**Suggestions for Replicating Success:**\n\n- **Focus on Trending Topics with Practical Applications:**\n  Incorporate current trends in technology or business and provide detailed, actionable insights that viewers can easily apply.\n\n- **Engaging Thumbnails and Storytelling:**\n  Use dynamic and bold graphics in thumbnails and craft videos around relatable stories or personas to increase viewer engagement.\n\n- **Build and Leverage a Community:**\n  Establish a loyal viewer base through consistent, high-quality content and engage actively with the audience to foster a sense of community and trust. \n\nBy following these strategies, creators can enhance their content's appeal and achieve similar success."
+            },
+            "How AI Could Empower Any Business | Andrew Ng | TED": {
+                "video_info": {
+                    "videoId": "reUZRyXxUs4",
+                    "channel": "TED",
+                    "publishedAt": "2022-10-13T11:00:35Z",
+                    "thumbnail": "https://i.ytimg.com/vi/reUZRyXxUs4/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "1203027",
+                    "likes": "24857",
+                    "comments": "503",
+                    "channel": "TED"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n**Content:**\n- **Relevance and Timeliness:** The topic of AI transformation is highly relevant, engaging audiences interested in technology and business innovation. The analogy with literacy democratization is compelling and relatable, making complex ideas accessible.\n- **Expert Speaker:** Andrew Ng is a prominent figure in AI, lending credibility and attracting viewers interested in authoritative perspectives.\n\n**Thumbnail and Title:**\n- **Visual Appeal:** The thumbnail shows a professional setting with Andrew Ng, indicating a serious and informative presentation. It hints at the quality and expertise behind the content.\n- **Clear and Intriguing Title:** The title is direct and promises valuable insights (\"How AI Could Empower Any Business\"), attracting professionals and entrepreneurs.\n\n**Channel Influence:**\n- **TED\u2019s Reputation:** TED\u2019s established reputation for high-quality, thought-provoking content attracts a broad audience. The brand itself is associated with insightful ideas worth spreading.\n\n**Audience Engagement:**\n- **Interactive Comments:** A considerable number of comments (503) suggests active viewer engagement and indicates that the content resonates with the audience. \n- **High Views and Likes:** With over 1.2 million views and 24,857 likes, the video is clearly popular, reflecting its effective reach and positive reception.\n\n\n### Suggestions for Similar Success\n\n- **Leverage Expert Insights:** Collaborate with well-respected figures in your field who can provide authoritative opinions and insights. This builds trust and attracts a knowledgeable audience.\n- **Use Relatable Analogies:** Make complex topics accessible by using familiar analogies or storytelling. This approach broadens the audience and enhances comprehension.\n- **Maintain Quality Production:** Ensure high production quality and professional presentation. A trusted platform or channel can also enhance credibility and attract more viewers."
+            }
+        },
+        "reddit_posts": [
+            {
+                "title": "I spent $47k and 18 months building an \"AI startup.\" Here's the brutal truth about why 90% of AI businesses are doomed.",
+                "subreddit": "Entrepreneur",
+                "upvotes": 1677,
+                "author": "Nipurn_1234",
+                "url": "https://reddit.com/r/Entrepreneur/comments/1mj1olw/i_spent_47k_and_18_months_building_an_ai_startup/"
+            },
+            {
+                "title": "How are you using AI in your business right now?",
+                "subreddit": "AiAutomations",
+                "upvotes": 26,
+                "author": "devravi",
+                "url": "https://reddit.com/r/AiAutomations/comments/1nj30zn/how_are_you_using_ai_in_your_business_right_now/"
+            },
+            {
+                "title": "Are all business ideas from AI rubbish?",
+                "subreddit": "passive_income",
+                "upvotes": 5,
+                "author": "Far-Perspective-9730",
+                "url": "https://reddit.com/r/passive_income/comments/1ndkxf1/are_all_business_ideas_from_ai_rubbish/"
+            }
+        ],
+        "x_data": null,
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "ai business landscape in india",
+                "ai business ideas",
+                "ai business name generator",
+                "ai business card generator",
+                "ai business analyst",
+                "ai business analyst course",
+                "ai business card generator free",
+                "ai business intelligence analyst",
+                "ai business analyst salary"
+            ],
+            "people_also_ask": [],
+            "youtube_recommendations": [
+                "ai business ideas",
+                "ai business",
+                "ai business card generator",
+                "ai business ideas 2025",
+                "ai business tools",
+                "ai business analyst",
+                "ai business ideas tamil",
+                "ai business opportunities",
+                "ai business model",
+                "ai business video generator",
+                "ai business ideas hindi",
+                "ai business podcast",
+                "ai business automation",
+                "ai business intelligence analyst"
+            ]
+        }
+    },
+    {
+        "videos": {
+            "What is Agentic AI and How Does it Work?": {
+                "video_info": {
+                    "videoId": "15_pppse4fY",
+                    "channel": "codebasics",
+                    "publishedAt": "2025-05-02T13:30:06Z",
+                    "thumbnail": "https://i.ytimg.com/vi/15_pppse4fY/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "395101",
+                    "likes": "5486",
+                    "comments": "180",
+                    "channel": "codebasics"
+                },
+                "market_analysis": "**Analysis of Video Performance**\n\n- **Content Clarity and Practicality**:\n  - The video offers a straightforward and practical explanation of Agentic AI, explicitly appealing to an audience seeking \"no BS\" information. This approach likely attracts viewers who appreciate direct explanations devoid of unnecessary complexity, increasing viewer retention.\n  - By using real-world applications and relatable examples, such as an HR assistant system, the content effectively engages viewers by illustrating how Agentic AI can be applied in everyday business scenarios. This practical application helps demystify a complex topic, making it accessible to a wider audience.\n\n- **Thumbnail and Title Appeal**:\n  - The thumbnail is clear and professional, featuring the text \"Simply Explained\" which likely reassures potential viewers of the video\u2019s clarity and simplicity. This can enhance click-through rates as viewers often seek out content that can distill complex topics into understandable segments.\n  - The title, \"What is Agentic AI and How Does it Work?\" is straightforward and SEO-friendly, likely capturing search traffic from users looking to understand this specific concept in AI, further increasing visibility and engagement.\n\n- **Channel Influence and Audience Engagement**:\n  - The channel, codebasics, likely has an existing audience interested in coding and technology, which helps boost initial viewership due to subscribers' notifications and recommendations.\n  - With high engagement metrics such as 5486 likes and 180 comments, the video appears to have prompted active participation from viewers, suggesting that the content resonated well and encouraged discourse, which in turn can improve video ranking through YouTube\u2019s algorithm.\n\n**Suggestions for Replicating Success**\n\n- **Simplicity and Practicality**: \n  - Continue to focus on simplifying complex topics and grounding them with practical, real-world examples. This approach not only appeals to a broad audience but also helps in retaining viewers who seek applicable knowledge.\n\n- **Engaging Thumbnails and Clear Titles**: \n  - Design thumbnails that are visually clear and supportive of the video\u2019s theme with concise, relevant text. Maintain titles that are both engaging and optimized for search to increase discoverability and attract a targeted audience interested in specific subject matter.\n\n- **Channel Engagement**:\n  - Foster a community by encouraging comments and actively responding to viewer queries to continue fostering engagement and improving the video\u2019s algorithmic standing."
+            },
+            "Generative vs Agentic AI: Shaping the Future of AI Collaboration": {
+                "video_info": {
+                    "videoId": "EDb37y_MhRw",
+                    "channel": "IBM Technology",
+                    "publishedAt": "2025-04-21T11:00:32Z",
+                    "thumbnail": "https://i.ytimg.com/vi/EDb37y_MhRw/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "637457",
+                    "likes": "9344",
+                    "comments": "259",
+                    "channel": "IBM Technology"
+                },
+                "market_analysis": "### Analysis of Video Performance\n\n1. **Content Quality and Relevance**:\n   - **Timely Topic**: The video addresses a highly relevant and trending topic\u2014AI technology, specifically focusing on generative and agentic AI. As these technologies are being rapidly adopted and discussed across sectors, the video taps into a growing audience eager to understand these concepts.\n   - **Clear Explanation**: The transcript reveals a well-structured explanation of concepts, making complex topics accessible to a broader audience. This clarity likely contributes to high engagement and understanding.\n\n2. **Thumbnail and Visual Appeal**:\n   - **Informative and Engaging Thumbnail**: The thumbnail includes text and visual elements that attract viewers by showing that the content will cover key differences between generative and agentic AI. The presence of a confident presenter adds a personal touch which can increase click-through rates.\n\n3. **Channel Influence and Engagement**:\n   - **Reputable Source**: IBM Technology is a well-known channel associated with credible and authoritative information on technology topics. Viewers are more likely to engage with content from trusted sources, contributing to views, likes, and shares.\n\n### Suggestions for Replicating Success\n\n- **Focus on Trending Topics**: Creating content around emerging and rapidly evolving topics like AI can attract interest and increase discoverability. Keeping content current and ensuring it addresses common questions or confusions can boost views.\n  \n- **Use Clear Visuals and Thumbnails**: Utilize text and visuals in thumbnails that directly relate to the content, ensuring it is attention-grabbing and clearly communicates the video's main focus. Personalizing thumbnails with presenters can also add authenticity.\n\n- **Leverage Expertise and Credibility**: Establishing content from credible channels or featuring expert insights can enhance viewer trust and engagement, making it more shareable and likely to appear in search results."
+            },
+            "AI Agents Full Course 2025  | AI Agents Tutorial For Beginners | Agentic AI Course | Edureka Live": {
+                "video_info": {
+                    "videoId": "RPoGqy_mv3s",
+                    "channel": "edureka!",
+                    "publishedAt": "2025-10-07T11:58:27Z",
+                    "thumbnail": "https://i.ytimg.com/vi/RPoGqy_mv3s/hqdefault.jpg"
+                },
+                "video_stats": {
+                    "views": "8036",
+                    "likes": "310",
+                    "comments": "0",
+                    "channel": "edureka!"
+                },
+                "market_analysis": "### Analysis of Video Performance:\n\n1. **Content Appeal:**\n   - **Relevance and Demand:** The video focuses on AI agents, a rapidly growing field with increasing demand for learning resources. As AI continues to transform industries, people are eager to understand and explore its potential.\n   - **Comprehensive Coverage:** Described as a \"full course,\" the video promises a thorough introduction, attracting viewers looking for in-depth knowledge.\n   - **Practical Insights:** The course includes practical knowledge and tools (like lang chain, LLM ops, and prompt engineering), which are valuable for learners aiming to work with AI applications.\n\n2. **Thumbnail and Title:**\n   - **Professional and Informative Design:** The thumbnail is clear and professional, featuring terms like \"AI Agents\" and \"Full Course,\" which are likely to attract educational content seekers.\n   - **Descriptive Title:** The title effectively communicates the video\u2019s content and purpose, targeting beginners interested in AI.\n\n3. **Channel Influence and Audience Engagement:**\n   - **Channel Reputation:** Edureka is known for quality educational content, which likely attracts a loyal audience base.\n   - **Call to Action:** The video effectively uses calls to action like liking, sharing, and subscribing, which helps increase interaction and visibility, although it currently lacks comments.\n\n### Suggestions for Similar Success:\n\n- **Clear, Informative Thumbnails and Titles:**\n  Ensure that thumbnails and titles are visually appealing and clearly communicate the video's content to attract targeted viewers.\n\n- **Engage with the Audience:**\n  Encourage viewers to comment and ask questions. This increases engagement and provides valuable feedback to improve future content.\n\n- **Leverage Channel Authority:**\n  Build a strong channel reputation for high-quality, reliable content to attract and retain a dedicated audience. Collaborate with industry experts to add credibility."
+            }
+        },
+        "reddit_posts": [
+            {
+                "title": "Everyone talks about Agentic AI, but nobody shows THIS",
+                "subreddit": "AI_Agents",
+                "upvotes": 77,
+                "author": "ViriathusLegend",
+                "url": "https://reddit.com/r/AI_Agents/comments/1n7t6al/everyone_talks_about_agentic_ai_but_nobody_shows/"
+            },
+            {
+                "title": "Is Agentic AI Already Overhyped?",
+                "subreddit": "ArtificialInteligence",
+                "upvotes": 52,
+                "author": "TheTeamBillionaire",
+                "url": "https://reddit.com/r/ArtificialInteligence/comments/1nm1rq8/is_agentic_ai_already_overhyped/"
+            },
+            {
+                "title": "I want to learn agentic AI for my company. Where should I start?",
+                "subreddit": "learnmachinelearning",
+                "upvotes": 15,
+                "author": "Champ-shady",
+                "url": "https://reddit.com/r/learnmachinelearning/comments/1mh87r0/i_want_to_learn_agentic_ai_for_my_company_where/"
+            }
+        ],
+        "x_data": null,
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "agentic ai",
+                "agentic ai course",
+                "agentic ai frameworks",
+                "agentic ai meaning",
+                "agentic ai jobs",
+                "agentic ai vs ai agents",
+                "agentic ai certification",
+                "agentic ai vs generative ai",
+                "agentic ai tools",
+                "agentic ai training"
+            ],
+            "people_also_ask": [],
+            "youtube_recommendations": [
+                "agentic ai",
+                "agentic ai vs generative ai",
+                "agentic ai full course",
+                "agentic ai tutorial",
+                "agentic ai course",
+                "agentic ai explained",
+                "agentic ai projects",
+                "agentic ai andrew ng",
+                "agentic ai roadmap",
+                "agentic ai project end to end",
+                "agentic ai krish naik",
+                "agentic ai campusx",
+                "agentic ai uipath",
+                "agentic ai tamil"
+            ]
+        }
+    },
+    {
+        "videos": {},
+        "reddit_posts": [
+            {
+                "title": "\ud83e\udd14 Elon Musk pays 200$ for openai",
+                "subreddit": "OpenAI",
+                "upvotes": 4521,
+                "author": "Independent-Wind4462",
+                "url": "https://reddit.com/r/OpenAI/comments/1mojmqz/elon_musk_pays_200_for_openai/"
+            },
+            {
+                "title": "OpenAI just pulled the biggest bait-and-switch in AI history and I'm done.",
+                "subreddit": "ChatGPT",
+                "upvotes": 10813,
+                "author": "Nipurn_1234",
+                "url": "https://reddit.com/r/ChatGPT/comments/1mkobei/openai_just_pulled_the_biggest_baitandswitch_in/"
+            },
+            {
+                "title": "Openai has been caught doing illegal",
+                "subreddit": "ChatGPT",
+                "upvotes": 2450,
+                "author": "Striking-Tour-8815",
+                "url": "https://reddit.com/r/ChatGPT/comments/1ns00e8/openai_has_been_caught_doing_illegal/"
+            }
+        ],
+        "x_data": {
+            "tweets": [
+                {
+                    "username": "iPhoneAddict.fr",
+                    "handle": "@iPhoneAddictFr",
+                    "content": "L'application Sora d\u2019OpenAI sur iPhone a d\u00e9j\u00e0 atteint 1 million de t\u00e9l\u00e9chargements \u2b07\ufe0f [link](https://iphoneaddict.fr/post/news-417164-lapp-sora-dopenai-iphone-atteint-1-million-telechargements)",
+                    "timestamp": "2023-10-13T12:00:11Z",
+                    "retweets": 2,
+                    "likes": 2
+                },
+                {
+                    "username": "Indigold275",
+                    "handle": "@indigold275",
+                    "content": "By that logic the US colonists couldn\u2019t talk about British politics because only those who like British politics could talk about it. In short, OpenAI, Google, X, Meta, Apple, Amazon, Microsoft, Intel, and more wouldn\u2019t exist cuz the US wouldn\u2019t exist.",
+                    "timestamp": "2023-10-13T12:00:16Z",
+                    "retweets": 0,
+                    "likes": 0
+                },
+                {
+                    "username": "Chayanon Rakkanjanan",
+                    "handle": "@MrMessenger",
+                    "content": "The largest bubble in history named AI Bubble \u2013 when will it burst!? Major companies like OpenAI and NVIDIA have invested millions to create a shockwave in the world's market. The question is... when will this bubble burst? Analysts are beginning to find that the current investment in the AI sector is circulating... [Link to image]",
+                    "timestamp": "2023-10-12T21:00:00Z",
+                    "retweets": 1172,
+                    "likes": 1098
+                }
+            ]
+        },
+        "ads_data": null,
+        "people_search_for": {
+            "google_recommendations": [
+                "openai",
+                "openai codex",
+                "openai api key",
+                "openai fm",
+                "openai agent kit",
+                "openai agent builder",
+                "openai gpt",
+                "openai playground",
+                "openai chatgpt",
+                "openai api"
+            ],
+            "people_also_ask": [
+                "Is OpenAI owned by Elon Musk?",
+                "Who is CEO of OpenAI?",
+                "Can I use OpenAI for free?",
+                "Who owns 51% of OpenAI?"
+            ],
+            "youtube_recommendations": [
+                "openai",
+                "openai dev day",
+                "openai o3",
+                "openai agentkit",
+                "openai agent",
+                "openai api key free",
+                "openai apps sdk",
+                "openai agent builder",
+                "openai api key",
+                "openai codex",
+                "openai api",
+                "openai agents sdk",
+                "openai api key free unlimited",
+                "openai image generator"
+            ]
+        }
+    }
+]
